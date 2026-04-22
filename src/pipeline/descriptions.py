@@ -25,30 +25,52 @@ def ensure_descriptions(
         if cache_path.exists() and (not force)
         else pd.DataFrame(columns=["tag_id", "tag_name", "description", "llm_model"])
     )
-    unique_tags = tags.drop_duplicates("tag_id")[["tag_id", "tag_name"]]
+
+    has_provided = "description" in tags.columns
+    unique_cols = ["tag_id", "tag_name"] + (["description"] if has_provided else [])
+    unique_tags = tags.drop_duplicates("tag_id")[unique_cols]
+
     missing = unique_tags[~unique_tags["tag_id"].isin(existing["tag_id"])]
     logger.info(
-        "descriptions: %d total, %d cached, %d to generate",
+        "descriptions[%s]: %d total, %d cached, %d to %s",
+        source,
         len(unique_tags),
         len(existing),
         len(missing),
+        "seed from source" if has_provided else "generate via LLM",
     )
-    new_rows = []
-    for row in missing.itertuples(index=False):
-        result = llm.describe(row.tag_name, source)
-        new_rows.append(
-            {
-                "tag_id": row.tag_id,
-                "tag_name": row.tag_name,
-                "description": result.description,
-                "llm_model": llm.model_id,
-            }
-        )
-        if len(new_rows) >= 50:
-            existing = pd.concat([existing, pd.DataFrame(new_rows)], ignore_index=True)
-            write_parquet(existing, cache_path)
-            new_rows = []
+
+    new_rows: list[dict] = []
+    if has_provided:
+        for row in missing.itertuples(index=False):
+            new_rows.append(
+                {
+                    "tag_id": row.tag_id,
+                    "tag_name": row.tag_name,
+                    "description": row.description,
+                    "llm_model": "<provided>",
+                }
+            )
+    else:
+        for row in missing.itertuples(index=False):
+            result = llm.describe(row.tag_name, source)
+            new_rows.append(
+                {
+                    "tag_id": row.tag_id,
+                    "tag_name": row.tag_name,
+                    "description": result.description,
+                    "llm_model": llm.model_id,
+                }
+            )
+            if len(new_rows) >= 50:
+                existing = pd.concat([existing, pd.DataFrame(new_rows)], ignore_index=True)
+                write_parquet(existing, cache_path)
+                new_rows = []
+
     if new_rows:
         existing = pd.concat([existing, pd.DataFrame(new_rows)], ignore_index=True)
         write_parquet(existing, cache_path)
-    return existing.merge(unique_tags, on=["tag_id", "tag_name"], how="right")
+
+    return existing.merge(
+        unique_tags[["tag_id", "tag_name"]], on=["tag_id", "tag_name"], how="right"
+    )

@@ -5,24 +5,30 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.config import settings
 from src.utils.hashing import tag_id as make_tag_id
 
 
 class SourceAdapter(ABC):
     name: str
-    key_column: str
+    raw_filename: str = "index.csv"
 
-    @abstractmethod
     def raw_files(self) -> list[Path]:
-        pass
+        p = settings.paths.raw_dir / self.name / self.raw_filename
+        return [p] if p.exists() else []
 
-    @abstractmethod
     def load_records(self) -> pd.DataFrame:
-        pass
+        files = self.raw_files()
+        if not files:
+            raise FileNotFoundError(
+                f"No {self.raw_filename} in "
+                f"{settings.paths.raw_dir / self.name}. Sync from Dropbox first."
+            )
+        p = files[0]
+        return pd.read_parquet(p) if p.suffix == ".parquet" else pd.read_csv(p)
 
     @abstractmethod
-    def extract_tags(self, records: pd.DataFrame) -> pd.DataFrame:
-        pass
+    def extract_tags(self, records: pd.DataFrame) -> pd.DataFrame: ...
 
     @staticmethod
     def assign_tag_ids(df: pd.DataFrame, tag_col: str = "tag_name") -> pd.DataFrame:

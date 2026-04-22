@@ -10,12 +10,11 @@ def _seed_openalex(raw_dir):
     openalex_dir.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(
         [
-            {"work_id": "W1", "concept_display_name": "Machine learning"},
-            {"work_id": "W1", "concept_display_name": "Agriculture"},
-            {"work_id": "W2", "concept_display_name": "Machine learning"},
-            {"work_id": "W3", "concept_display_name": "Education"},
+            {"domain_id": "W1", "domain": "Machine learning", "keywords": "neural nets; deep learning"},
+            {"domain_id": "W2", "domain": "Agriculture", "keywords": "crop; soil; farming"},
+            {"domain_id": "W3", "domain": "Education", "keywords": "teaching; schools; curriculum"},
         ]
-    ).to_csv(openalex_dir / "sample.csv", index=False)
+    ).to_csv(openalex_dir / "index.csv", index=False)
 
 
 def test_end_to_end_produces_csv(tmp_project, fake_embedder, fake_llm):
@@ -53,3 +52,18 @@ def test_deleting_sector_cache_reembeds_only_sectors(tmp_project, fake_embedder,
     assert fake_embedder.calls > embed_before
     assert fake_llm.describe_calls == describe_before
     assert fake_llm.classify_calls == classify_before
+
+
+def test_regpat_seed_description_skips_llm_describe(tmp_project, fake_embedder, fake_llm):
+    regpat_dir = tmp_project / "data" / "raw" / "regpat"
+    regpat_dir.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame(
+        [
+            {"domain_id": "A61P35", "domain": "name", "description": "antineoplastic agents for cancer treatment"},
+            {"domain_id": "A61P29", "domain": "name", "description": "anti-inflammatory compounds"},
+        ]
+    ).to_csv(regpat_dir / "index.csv", index=False)
+
+    out_path = run_source("regpat", embedder=fake_embedder, llm=fake_llm)
+    assert out_path.exists()
+    assert fake_llm.describe_calls == 0

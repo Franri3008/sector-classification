@@ -47,7 +47,10 @@ def run_source(
         len(tags_to_keys),
         tags_to_keys["tag_id"].nunique(),
     )
-    unique_tags = tags_to_keys.drop_duplicates("tag_id")[["tag_id", "tag_name"]]
+    keep_cols = ["tag_id", "tag_name"] + (
+        ["description"] if "description" in tags_to_keys.columns else []
+    )
+    unique_tags = tags_to_keys.drop_duplicates("tag_id")[keep_cols]
     tags_with_desc = ensure_descriptions(source, unique_tags, llm, force=force)
     sectors = embed_sectors(embedder, force=force)
     sector_emb = np.stack(sectors["embedding"].to_numpy())
