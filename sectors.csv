@@ -1,0 +1,89 @@
+division_code,division_name,section_code,section_name
+01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING"
+02,Forestry and logging,A,"AGRICULTURE, FORESTRY AND FISHING"
+03,Fishing and aquaculture,A,"AGRICULTURE, FORESTRY AND FISHING"
+05,Mining of coal and lignite,B,MINING AND QUARRYING
+06,Extraction of crude petroleum and natural gas,B,MINING AND QUARRYING
+07,Mining of metal ores,B,MINING AND QUARRYING
+08,Other mining and quarrying,B,MINING AND QUARRYING
+09,Mining support service activities,B,MINING AND QUARRYING
+10,Manufacture of food products,C,MANUFACTURING
+11,Manufacture of beverages,C,MANUFACTURING
+12,Manufacture of tobacco products,C,MANUFACTURING
+13,Manufacture of textiles,C,MANUFACTURING
+14,Manufacture of wearing apparel,C,MANUFACTURING
+15,Manufacture of leather and related products of other materials,C,MANUFACTURING
+16,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",C,MANUFACTURING
+17,Manufacture of paper and paper products,C,MANUFACTURING
+18,Printing and reproduction of recorded media,C,MANUFACTURING
+19,Manufacture of coke and refined petroleum products,C,MANUFACTURING
+20,Manufacture of chemicals and chemical products,C,MANUFACTURING
+21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING
+22,Manufacture of rubber and plastic products,C,MANUFACTURING
+23,Manufacture of other non-metallic mineral products,C,MANUFACTURING
+24,Manufacture of basic metals,C,MANUFACTURING
+25,"Manufacture of fabricated metal products, except machinery and equipment",C,MANUFACTURING
+26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING
+27,Manufacture of electrical equipment,C,MANUFACTURING
+28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING
+29,"Manufacture of motor vehicles, trailers and semi-trailers",C,MANUFACTURING
+30,Manufacture of other transport equipment,C,MANUFACTURING
+31,Manufacture of furniture,C,MANUFACTURING
+32,Other manufacturing,C,MANUFACTURING
+33,"Repair, maintenance and installation of machinery and equipment",C,MANUFACTURING
+35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY"
+36,"Water collection, treatment and supply",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
+37,Sewerage,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
+38,"Waste collection, recovery and disposal activities",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
+39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
+41,Construction of residential and non-residential buildings,F,CONSTRUCTION
+42,Civil engineering,F,CONSTRUCTION
+43,Specialised construction activities,F,CONSTRUCTION
+45,Trade and repair of motor vehicles and motorcycles,G,WHOLESALE AND RETAIL TRADE
+46,Wholesale trade,G,WHOLESALE AND RETAIL TRADE
+47,Retail trade,G,WHOLESALE AND RETAIL TRADE
+49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE
+50,Water transport,H,TRANSPORTATION AND STORAGE
+51,Air transport,H,TRANSPORTATION AND STORAGE
+52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE
+53,Postal and courier activities,H,TRANSPORTATION AND STORAGE
+55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES
+56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES
+58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES"
+59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES"
+60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES"
+61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES"
+62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES"
+63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES"
+64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES
+65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES
+66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES
+68,Real estate activities,M,REAL ESTATE ACTIVITIES
+69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+72,Scientific research and development,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+74,"Other professional, scientific and technical activities",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+75,Veterinary activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
+77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+80,Investigation and security activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+82,"Office administrative, office support and other business support activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES
+84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY
+85,Education,Q,EDUCATION
+86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES
+87,Residential care activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES
+88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES
+90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION"
+91,"Libraries, archives, museums and other cultural activities",S,"ARTS, SPORTS AND RECREATION"
+92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION"
+93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION"
+94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES
+95,"Repair and maintenance of computers, personal and household goods, and motor vehicles and motorcycles",T,OTHER SERVICE ACTIVITIES
+96,Personal service activities,T,OTHER SERVICE ACTIVITIES
+97,Activities of households as employers of domestic personnel,U,ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS AND UNDIFFERENTIATED GOODS - AND SERVICE-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE
+98,Undifferentiated goods- and service-producing activities of private households for own use,U,ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS AND UNDIFFERENTIATED GOODS - AND SERVICE-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE
+99,Activities of extraterritorial organisations and bodies,V,ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES

@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project data (caches, raw inputs, outputs)
+data/raw/
+data/processed/
+data/outputs/
+*.npz
+*.parquet

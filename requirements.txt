@@ -1,0 +1,14 @@
+pandas>=2.2
+pyarrow>=16
+numpy>=1.26
+openai>=1.40
+anthropic>=0.34
+ipython>=8
+dropbox>=12
+pydantic>=2.7
+pydantic-settings>=2.3
+typer>=0.12
+tenacity>=8.3
+scikit-learn>=1.4
+tqdm>=4.66
+python-dotenv>=1.0
