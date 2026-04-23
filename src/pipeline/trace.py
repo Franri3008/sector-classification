@@ -209,9 +209,19 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
         adapter = get_adapter(source)
         tags_df = adapter.extract_tags(adapter.load_records())
         keys = tags_df.loc[tags_df["tag_id"] == tag_id, "key"].unique()
+        code_to_name = dict(
+            zip(
+                load_sectors()["division_code"],
+                load_sectors()["division_name"],
+                strict=True,
+            )
+        )
         for key in keys:
             for p in picks:
-                output_rows.append({"sector": str(p["division_code"]), "key": str(key)})
+                name = code_to_name.get(str(p["division_code"]))
+                if not name:
+                    continue
+                output_rows.append({"sector": name, "key": str(key)})
         output_rows = [dict(t) for t in {tuple(sorted(r.items())) for r in output_rows}]
         output_rows.sort(key=lambda r: (r["key"], r["sector"]))
     except Exception as e:
