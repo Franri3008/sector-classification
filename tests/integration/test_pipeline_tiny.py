@@ -19,11 +19,13 @@ def _seed_openalex(raw_dir):
 
 def test_end_to_end_produces_csv(tmp_project, fake_embedder, fake_llm):
     _seed_openalex(tmp_project / "data" / "raw")
-    out_path = run_source("openalex", embedder=fake_embedder, llm=fake_llm)
-    assert out_path.exists()
-    df = pd.read_csv(out_path)
+    summary = run_source("openalex", embedder=fake_embedder, llm=fake_llm)
+    assert summary.output_path.exists()
+    assert summary.elapsed_s >= 0
+    assert summary.output_rows > 0
+    df = pd.read_csv(summary.output_path)
     assert list(df.columns) == ["sector", "key"]
-    assert len(df) > 0
+    assert len(df) == summary.output_rows
     assert set(df["key"]) <= {"W1", "W2", "W3"}
 
 
@@ -64,6 +66,6 @@ def test_regpat_seed_description_skips_llm_describe(tmp_project, fake_embedder, 
         ]
     ).to_csv(regpat_dir / "index.csv", index=False)
 
-    out_path = run_source("regpat", embedder=fake_embedder, llm=fake_llm)
-    assert out_path.exists()
+    summary = run_source("regpat", embedder=fake_embedder, llm=fake_llm)
+    assert summary.output_path.exists()
     assert fake_llm.describe_calls == 0

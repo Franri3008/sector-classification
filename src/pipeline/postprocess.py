@@ -17,7 +17,7 @@ def build_output(
     tags_to_keys: pd.DataFrame,
     classifications: pd.DataFrame,
     run_id: str | None = None,
-) -> Path:
+) -> tuple[Path, int]:
     run_id = run_id or datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     sectors = load_sectors()[["division_code", "division_name"]]
     picks = classifications.dropna(subset=["division_code"])[["tag_id", "division_code"]]
@@ -36,4 +36,4 @@ def build_output(
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path, index=False)
     logger.info("wrote %d rows to %s", len(out), out_path)
-    return out_path
+    return out_path, len(out)

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pathlib import Path
+import time
 
 import numpy as np
 import pandas as pd
@@ -16,6 +16,7 @@ from src.pipeline.embed_tags import embed_tags
 from src.pipeline.postprocess import build_output
 from src.pipeline.ranking import top_candidates
 from src.pipeline.sectors import embed_sectors
+from src.pipeline.summary import RunSummary
 from src.sources.registry import get_adapter, list_sources
 
 logger = get_logger(__name__)
@@ -32,12 +33,13 @@ def run_source(
     llm: LLMClient | None = None,
     force: bool = False,
     skip_embed: bool = False,
-) -> Path:
+) -> RunSummary:
     if embedder is None or llm is None:
         default_emb, default_llm = _default_providers()
         embedder = embedder or default_emb
         llm = llm or default_llm
     logger.info("=== run_source: %s ===", source)
+    t0 = time.perf_counter()
     adapter = get_adapter(source)
     records = adapter.load_records()
     tags_to_keys = adapter.extract_tags(records)
@@ -67,16 +69,32 @@ def run_source(
     tag_emb = np.stack(tags_with_desc["embedding"].to_numpy())
     candidates = top_candidates(tag_emb, sector_emb, sectors)
     classifications = classify_tags(source, tags_with_desc, candidates, llm, force=force)
-    return build_output(source, tags_to_keys, classifications)
+    output_path, output_rows = build_output(source, tags_to_keys, classifications)
+    elapsed = time.perf_counter() - t0
+
+    n_unique = int(tags_to_keys["tag_id"].nunique())
+    n_with_picks = int(
+        classifications.dropna(subset=["division_code"])["tag_id"].nunique()
+    )
+    return RunSummary(
+        source=source,
+        output_path=output_path,
+        input_rows=len(tags_to_keys),
+        unique_tags=n_unique,
+        tags_with_picks=n_with_picks,
+        tags_no_pick=n_unique - n_with_picks,
+        output_rows=output_rows,
+        elapsed_s=elapsed,
+    )
 
 
 def run_all(
     *, embedder: EmbeddingProvider | None = None, llm: LLMClient | None = None, force: bool = False
-) -> list[Path]:
-    outputs: list[Path] = []
+) -> list[RunSummary]:
+    summaries: list[RunSummary] = []
     for src in list_sources():
-        outputs.append(run_source(src, embedder=embedder, llm=llm, force=force))
-    return outputs
+        summaries.append(run_source(src, embedder=embedder, llm=llm, force=force))
+    return summaries
 
 
 _ = pd

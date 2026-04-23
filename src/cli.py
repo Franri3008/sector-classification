@@ -28,11 +28,16 @@ def _main(
 
 @app.command("run-all")
 def run_all_cmd(force: bool = typer.Option(False, "--force", help="Ignore caches.")) -> None:
-    from src.pipeline.runner import run_all
+    import time
 
-    outputs = run_all(force=force)
-    for p in outputs:
-        typer.echo(str(p))
+    from src.pipeline.runner import run_all
+    from src.pipeline.summary import capture_warnings, format_report
+
+    t0 = time.perf_counter()
+    with capture_warnings() as warnings:
+        summaries = run_all(force=force)
+    typer.echo("")
+    typer.echo(format_report(summaries, warnings, time.perf_counter() - t0))
 
 
 @app.command("run")
@@ -45,10 +50,16 @@ def run_cmd(
         help="Reuse cached tag embeddings even if the set of tags has changed.",
     ),
 ) -> None:
-    from src.pipeline.runner import run_source
+    import time
 
-    path = run_source(source.value, force=force, skip_embed=skip_embed)
-    typer.echo(str(path))
+    from src.pipeline.runner import run_source
+    from src.pipeline.summary import capture_warnings, format_report
+
+    t0 = time.perf_counter()
+    with capture_warnings() as warnings:
+        summary = run_source(source.value, force=force, skip_embed=skip_embed)
+    typer.echo("")
+    typer.echo(format_report([summary], warnings, time.perf_counter() - t0))
 
 
 @app.command("sync")
@@ -120,7 +131,8 @@ def postprocess_cmd(source: Source) -> None:
     records = adapter.load_records()
     tags_to_keys = adapter.extract_tags(records)
     classifications = load_classifications(source.value)
-    build_output(source.value, tags_to_keys, classifications)
+    out_path, n_rows = build_output(source.value, tags_to_keys, classifications)
+    typer.echo(f"wrote {n_rows} rows to {out_path}")
 
 
 @app.command("trace")
