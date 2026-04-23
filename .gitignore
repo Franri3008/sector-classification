@@ -214,3 +214,4 @@ data/outputs/
 *.parquet
 
 dashboard/data.json
+dashboard/traces/

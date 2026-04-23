@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Sector Classification — Dashboard</title>
+  <title>Sector Classification</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
-    /* ─── viz-styles.css (verbatim) ──────────────────────────────────────── */
-    html, body { height: 100%; }
+    /* ─── viz-styles.css (subset, verbatim) ───────────────────────────────── */
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       overflow: hidden;
@@ -15,201 +20,559 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Helvetica, Arial, sans-serif;
       background-color: white;
     }
-    .viz-grid {
-      display: grid;
-      grid-template-rows: 16fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      height: 100vh; width: 100vw;
-      box-sizing: border-box;
-      padding-bottom: clamp(8px, 2vh, 18px);
+
+    #viz {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      min-width: 0;
     }
-    #viz { width: 100%; height: 100%; min-height: 0; min-width: 0; }
-    #chart { display: block; width: 100%; height: 100%; }
+
+    #chart {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .legend {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       gap: clamp(6px, 1vw, 14px);
       background: rgba(255, 255, 255, 1);
       padding: clamp(4px, 1vh, 10px) clamp(10px, 2vw, 16px);
       border-radius: clamp(6px, 1vw, 12px);
-      max-width: 100%; max-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       font-size: clamp(0.625rem, 1.4vw, 1rem);
     }
-    .legend-item {
-      display: flex; align-items: center; gap: clamp(4px, 1vw, 8px);
-      font-weight: 600; color: #333; font-size: inherit; padding: 2px 6px; cursor: default;
-    }
-    .legend-square {
-      width: clamp(8px, 0.9vw, 12px); height: clamp(8px, 0.9vw, 12px);
-      border-radius: 0; flex-shrink: 0;
-    }
-    .source-text {
-      font-size: clamp(10px, 1.6vw, 16px); font-weight: 600; color: #333;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      max-width: 100%; font-style: normal;
-    }
-    .source-text a { color: #2756d3; text-decoration: underline; cursor: default; font-style: normal; }
-    .logo { height: 100%; width: auto; max-height: 100%; max-width: 100%; pointer-events: auto; object-fit: contain; }
-    .axis path, .axis line { stroke: #cfd2d7; }
-    .tick text { font-weight: 600; fill: #4b5563; }
-    .grid-lines line { stroke: #DBDBDB; stroke-dasharray: 2, 3; }
-    .grid-lines path { stroke: none; }
-    .bar-label { fill: #555; font-weight: 500; }
 
-    /* ─── Dashboard-specific grid ────────────────────────────────────────── */
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: clamp(4px, 1vw, 8px);
+      font-weight: 600;
+      color: #333;
+      font-size: inherit;
+      padding: 2px 6px;
+      cursor: default;
+    }
+
+    .legend-square {
+      width: clamp(8px, 0.9vw, 12px);
+      height: clamp(8px, 0.9vw, 12px);
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    .axis path,
+    .axis line {
+      stroke: #cfd2d7;
+    }
+
+    .tick text {
+      font-weight: 600;
+      fill: #4b5563;
+    }
+
+    .grid-lines line {
+      stroke: #DBDBDB;
+      stroke-dasharray: 2, 3;
+    }
+
+    .grid-lines path {
+      stroke: none;
+    }
+
+    .bar-label {
+      fill: #555;
+      font-weight: 500;
+    }
+
+    .selector-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(2px, 0.5vw, 6px);
+      padding: clamp(2px, 0.4vw, 4px);
+      border-radius: 6px;
+      border: 1px solid rgba(17, 24, 39, 0.15);
+      background: #f8fafc;
+      max-width: 100%;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
+    .selector-button {
+      border: none;
+      background: transparent;
+      padding: clamp(4px, 0.8vh, 8px) clamp(8px, 1.5vw, 14px);
+      border-radius: 6px;
+      font-size: clamp(9px, 1.4vw, 13px);
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
+    .selector-button.active {
+      background: #2756d3;
+      color: #fff;
+    }
+
+    /* ─── Dashboard grid ──────────────────────────────────────────────────── */
     .dash-grid {
       display: grid;
-      grid-template-rows: auto 1fr auto auto;
+      grid-template-rows: auto 1fr auto;
       grid-template-columns: 1fr 1fr;
-      height: 100vh; width: 100vw;
+      height: 100vh;
+      width: 100vw;
       box-sizing: border-box;
       padding: 16px 20px 12px;
       gap: 10px;
       background: #fff;
     }
+
     .dash-header {
-      grid-row: 1; grid-column: 1 / span 2;
-      display: flex; flex-direction: column; gap: 6px;
+      grid-row: 1;
+      grid-column: 1 / span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
       min-width: 0;
     }
+
     .dash-title-row {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
-      flex-wrap: wrap; min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      min-width: 0;
     }
+
     .dash-title {
       font-size: clamp(16px, 2.2vw, 22px);
-      font-weight: 700; color: #111;
-      margin: 0; letter-spacing: -0.01em;
+      font-weight: 700;
+      color: #111;
+      margin: 0;
+      letter-spacing: -0.01em;
     }
+
     .dash-meta {
-      font-size: clamp(10px, 1.2vw, 13px); font-weight: 500; color: #64748b;
+      font-size: clamp(10px, 1.2vw, 13px);
+      font-weight: 500;
+      color: #64748b;
     }
+
     .dash-meta code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      color: #334155; background: #f1f5f9; padding: 1px 5px; border-radius: 3px;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 3px;
     }
+
     .dash-kpis {
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: stretch;
+      min-width: 0;
     }
+
     .dash-kpi {
-      flex: 1 1 140px; min-width: 0;
+      flex: 1 1 140px;
+      min-width: 0;
       border: 1px solid rgba(17, 24, 39, 0.1);
-      border-radius: 6px; padding: 8px 12px;
+      border-radius: 6px;
+      padding: 8px 12px;
       background: #fff;
-      display: flex; flex-direction: column; gap: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
     }
+
     .dash-kpi-label {
       font-size: clamp(9px, 1.1vw, 12px);
-      font-weight: 600; color: #64748b;
-      text-transform: uppercase; letter-spacing: 0.04em;
-      display: flex; align-items: center; gap: 6px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
+
     .dash-kpi-swatch {
-      width: 8px; height: 8px; border-radius: 0; flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 0;
+      flex-shrink: 0;
     }
+
     .dash-kpi-stats {
-      display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap;
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
+
     .dash-kpi-stat {
-      display: flex; flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
+
     .dash-kpi-value {
       font-size: clamp(14px, 1.8vw, 20px);
-      font-weight: 700; color: #111; line-height: 1.05;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.05;
       font-variant-numeric: tabular-nums;
     }
+
     .dash-kpi-unit {
       font-size: clamp(9px, 1vw, 11px);
-      font-weight: 500; color: #64748b;
+      font-weight: 500;
+      color: #64748b;
     }
+
+    /* ─── Panels ──────────────────────────────────────────────────────────── */
     .dash-panel {
-      display: flex; flex-direction: column;
-      min-width: 0; min-height: 0;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 0;
       border: 1px solid rgba(17, 24, 39, 0.08);
       border-radius: 6px;
       padding: 8px 10px 4px;
       background: #fff;
     }
+
     #panel-top { grid-row: 2; grid-column: 1; }
     #panel-sections { grid-row: 2; grid-column: 2; }
+
     .dash-panel-title {
-      font-size: clamp(11px, 1.3vw, 14px); font-weight: 700; color: #111;
-      padding-bottom: 4px; flex-shrink: 0;
+      font-size: clamp(11px, 1.3vw, 14px);
+      font-weight: 700;
+      color: #111;
+      padding-bottom: 4px;
+      flex-shrink: 0;
     }
+
     .dash-panel-chart {
-      flex: 1 1 auto; min-height: 0;
+      flex: 1 1 auto;
+      min-height: 0;
       position: relative;
     }
+
     #dash-legend-row {
-      grid-row: 3; grid-column: 1 / span 2;
-      display: flex; align-items: center; justify-content: center;
+      grid-row: 3;
+      grid-column: 1 / span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    #dash-source {
-      grid-row: 4; grid-column: 1;
-      display: flex; align-items: center;
+
+    /* ─── Trace mode ──────────────────────────────────────────────────────── */
+    #panel-trace-list { grid-row: 2; grid-column: 1; }
+    #panel-trace-detail { grid-row: 2; grid-column: 2; }
+
+    .trace-controls {
+      display: flex;
+      gap: 8px;
+      padding-bottom: 6px;
+      flex-shrink: 0;
     }
-    #dash-logo {
-      grid-row: 4; grid-column: 2;
-      display: flex; align-items: center; justify-content: flex-end;
-      height: clamp(18px, 3vh, 28px);
+
+    .trace-source-picker,
+    .trace-search {
+      border: 1px solid rgba(17, 24, 39, 0.15);
+      border-radius: 5px;
+      padding: 5px 8px;
+      font-size: clamp(11px, 1.2vw, 13px);
+      font-family: inherit;
+      color: #111;
+      background: #fff;
+      min-width: 0;
     }
-    #dash-logo a { height: 100%; display: flex; align-items: center; cursor: default; }
+
+    .trace-source-picker {
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .trace-search {
+      flex: 1 1 auto;
+    }
+
+    .trace-search:focus,
+    .trace-source-picker:focus {
+      outline: 2px solid #2756d3;
+      outline-offset: 0;
+      border-color: #2756d3;
+    }
+
+    .trace-list-wrap {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      border-top: 1px solid rgba(17, 24, 39, 0.05);
+    }
+
+    .trace-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(17, 24, 39, 0.04);
+      cursor: pointer;
+      font-size: clamp(11px, 1.2vw, 13px);
+      line-height: 1.25;
+    }
+
+    .trace-row:hover { background: #f8fafc; }
+    .trace-row.active { background: rgba(39, 86, 211, 0.08); color: #1e3a8a; }
+
+    .trace-row-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+      font-weight: 600;
+    }
+
+    .trace-row-count {
+      font-variant-numeric: tabular-nums;
+      color: #64748b;
+      font-size: 0.85em;
+      flex-shrink: 0;
+    }
+
+    .trace-row-count.no-pick {
+      color: #b45309;
+    }
+
+    .trace-list-meta {
+      padding: 4px 8px;
+      font-size: clamp(10px, 1.1vw, 12px);
+      color: #64748b;
+      font-weight: 500;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(17, 24, 39, 0.05);
+    }
+
+    /* Detail panel */
+    .trace-detail-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 4px 4px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .trace-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .trace-block-label {
+      font-size: clamp(9px, 1.1vw, 11px);
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .trace-tag-name {
+      font-size: clamp(14px, 1.8vw, 18px);
+      font-weight: 700;
+      color: #111;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+
+    .trace-description {
+      font-size: clamp(11px, 1.2vw, 13px);
+      color: #334155;
+      line-height: 1.4;
+      background: #f8fafc;
+      border-radius: 4px;
+      padding: 6px 8px;
+      border-left: 3px solid #cbd5e1;
+    }
+
+    .trace-keys {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      max-height: 60px;
+      overflow-y: auto;
+    }
+
+    .trace-key-chip {
+      font-size: clamp(10px, 1.1vw, 12px);
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: #eef2f7;
+      color: #334155;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: nowrap;
+    }
+
+    .trace-picks {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .trace-pick {
+      border-left: 3px solid #10b981;
+      background: rgba(16, 185, 129, 0.05);
+      padding: 6px 8px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .trace-pick-header {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .trace-pick-name {
+      font-weight: 700;
+      font-size: clamp(11px, 1.3vw, 13px);
+      color: #065f46;
+    }
+
+    .trace-pick-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      color: #047857;
+    }
+
+    .trace-pick-sim {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      color: #047857;
+      font-size: 0.9em;
+    }
+
+    .trace-pick-reason {
+      font-size: clamp(10px, 1.2vw, 12px);
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .trace-picks-empty {
+      font-style: italic;
+      color: #b45309;
+      font-size: clamp(11px, 1.2vw, 13px);
+      background: rgba(180, 83, 9, 0.08);
+      padding: 6px 8px;
+      border-radius: 3px;
+      border-left: 3px solid #f59e0b;
+    }
+
+    #trace-candidates-chart {
+      width: 100%;
+      min-height: 220px;
+      flex-shrink: 0;
+    }
+
     .empty-note {
-      display: flex; align-items: center; justify-content: center;
-      height: 100%; color: #94a3b8;
-      font-size: clamp(11px, 1.2vw, 13px); font-style: italic;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #94a3b8;
+      font-size: clamp(11px, 1.2vw, 13px);
+      font-style: italic;
+      text-align: center;
+      padding: 10px;
     }
 
     /* Tooltip */
     #tooltip {
-      position: fixed; pointer-events: none;
-      background: #1e293b; color: #fff;
-      padding: 6px 9px; border-radius: 4px;
-      font-size: 12px; line-height: 1.35;
-      opacity: 0; transition: opacity 0.12s ease;
+      position: fixed;
+      pointer-events: none;
+      background: #1e293b;
+      color: #fff;
+      padding: 6px 9px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.35;
+      opacity: 0;
+      transition: opacity 0.12s ease;
       z-index: 20;
       max-width: 280px;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     }
+
     #tooltip .tt-title { font-weight: 700; margin-bottom: 3px; }
     #tooltip .tt-row { display: flex; gap: 8px; justify-content: space-between; }
-    #tooltip .tt-swatch {
-      display: inline-block; width: 8px; height: 8px; margin-right: 5px;
-    }
+    #tooltip .tt-swatch { display: inline-block; width: 8px; height: 8px; margin-right: 5px; }
     #tooltip .tt-num { font-variant-numeric: tabular-nums; font-weight: 600; }
   </style>
 </head>
+
 <body>
   <div class="dash-grid">
     <header class="dash-header">
       <div class="dash-title-row">
-        <h1 class="dash-title">Sector Classification — Dashboard</h1>
+        <h1 class="dash-title">Sector Classification</h1>
+        <div class="selector-group" id="mode-toggle">
+          <button class="selector-button active" data-mode="overview">Overview</button>
+          <button class="selector-button" data-mode="trace">Trace</button>
+        </div>
         <div class="dash-meta" id="meta">loading…</div>
       </div>
       <div class="dash-kpis" id="kpis"></div>
     </header>
 
-    <section class="dash-panel" id="panel-top">
+    <!-- Overview mode -->
+    <section class="dash-panel mode-overview" id="panel-top">
       <div class="dash-panel-title">Top divisions by mappings (stacked by source)</div>
       <div class="dash-panel-chart" id="viz-top"></div>
     </section>
 
-    <section class="dash-panel" id="panel-sections">
-      <div class="dash-panel-title">NACE sections (21 sections, stacked by source)</div>
+    <section class="dash-panel mode-overview" id="panel-sections">
+      <div class="dash-panel-title">NACE sections (stacked by source)</div>
       <div class="dash-panel-chart" id="viz-sections"></div>
+    </section>
+
+    <!-- Trace mode -->
+    <section class="dash-panel mode-trace" id="panel-trace-list" hidden>
+      <div class="dash-panel-title">Tags</div>
+      <div class="trace-controls">
+        <select class="trace-source-picker" id="trace-source-picker"></select>
+        <input class="trace-search" id="trace-search" type="search" placeholder="filter by tag name…" autocomplete="off">
+      </div>
+      <div class="trace-list-wrap" id="trace-list"></div>
+      <div class="trace-list-meta" id="trace-list-meta">—</div>
+    </section>
+
+    <section class="dash-panel mode-trace" id="panel-trace-detail" hidden>
+      <div class="dash-panel-title">Trace</div>
+      <div class="trace-detail-body" id="trace-detail">
+        <div class="empty-note">Pick a tag on the left to trace its path through the pipeline.</div>
+      </div>
     </section>
 
     <div id="dash-legend-row">
       <div class="legend" id="legend"></div>
-    </div>
-
-    <div id="dash-source">
-      <div class="source-text">Source: generated by <code>python main.py build-dashboard</code></div>
-    </div>
-
-    <div id="dash-logo">
-      <a href="https://aiworld.eu/" target="_blank" rel="noopener">
-        <img src="https://aiworld.eu/logo-transparent.svg" class="logo" alt="AI World logo">
-      </a>
     </div>
   </div>
 
@@ -219,9 +582,10 @@
     // ─── Config ─────────────────────────────────────────────────────────────
     const TOP_N_DIVISIONS = 20;
     const DATA_URL = "data.json";
+    const TRACE_URL = s => `traces/${s}.json`;
     const tooltip = document.getElementById("tooltip");
 
-    // ─── Data helpers ───────────────────────────────────────────────────────
+    // ─── Helpers ────────────────────────────────────────────────────────────
     function smartFormat(v) {
       if (!isFinite(v)) return "N/A";
       if (Math.abs(v) >= 1e6) return d3.format(".1f")(v / 1e6) + "M";
@@ -229,26 +593,36 @@
       return d3.format(",")(v);
     }
     function truncate(s, n) { return s.length > n ? s.slice(0, n - 1) + "…" : s; }
-
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
     function showTooltip(html, evt) {
       tooltip.innerHTML = html;
       tooltip.style.left = (evt.clientX + 14) + "px";
-      tooltip.style.top  = (evt.clientY - 24) + "px";
+      tooltip.style.top = (evt.clientY - 24) + "px";
       tooltip.style.opacity = "1";
     }
     function hideTooltip() { tooltip.style.opacity = "0"; }
 
-    // ─── Renderers ──────────────────────────────────────────────────────────
+    // ─── State ──────────────────────────────────────────────────────────────
     let DATA = null;
     let sourceNames = [];
     let colorBySource = {};
+    let mode = "overview";
 
+    let traceCache = {};            // source -> { tags, ...}
+    let traceCurrentSource = null;
+    let traceCurrentTagId = null;
+    let traceFilter = "";
+
+    // ─── Meta / KPIs / Legend ───────────────────────────────────────────────
     function renderMeta() {
       const meta = document.getElementById("meta");
       const when = DATA.generated_at ? new Date(DATA.generated_at).toLocaleString() : "unknown";
-      meta.innerHTML = `generated <code>${when}</code> · ${DATA.n_divisions} divisions · ${DATA.n_sections} sections`;
+      meta.innerHTML = `generated <code>${escapeHtml(when)}</code>`;
     }
-
     function renderKPIs() {
       const box = document.getElementById("kpis");
       box.innerHTML = "";
@@ -262,25 +636,23 @@
         card.innerHTML = `
           <div class="dash-kpi-label">
             <span class="dash-kpi-swatch" style="background:${s.color}"></span>
-            <span>${s.source}</span>
+            <span>${escapeHtml(s.source)}</span>
           </div>
           <div class="dash-kpi-stats">
             <div class="dash-kpi-stat"><span class="dash-kpi-value">${smartFormat(s.total_mappings)}</span><span class="dash-kpi-unit">mappings</span></div>
             <div class="dash-kpi-stat"><span class="dash-kpi-value">${smartFormat(s.unique_keys)}</span><span class="dash-kpi-unit">keys</span></div>
             <div class="dash-kpi-stat"><span class="dash-kpi-value">${s.sectors_covered}</span><span class="dash-kpi-unit">of ${DATA.n_divisions} sectors</span></div>
-          </div>
-        `;
+          </div>`;
         box.appendChild(card);
       });
     }
-
     function renderLegend() {
       const box = document.getElementById("legend");
       box.innerHTML = "";
       DATA.sources.forEach(s => {
         const item = document.createElement("div");
         item.className = "legend-item";
-        item.innerHTML = `<span class="legend-square" style="background:${s.color}"></span><span>${s.source}</span>`;
+        item.innerHTML = `<span class="legend-square" style="background:${s.color}"></span><span>${escapeHtml(s.source)}</span>`;
         box.appendChild(item);
       });
       if (!DATA.sources.length) {
@@ -288,10 +660,11 @@
       }
     }
 
-    function stackedBarChart({ container, rows, keyField, labelField, title }) {
+    // ─── Stacked bar (overview) ─────────────────────────────────────────────
+    function stackedBarChart({ container, rows, keyField, labelField }) {
       container.innerHTML = "";
       const rect = container.getBoundingClientRect();
-      const width  = Math.max(320, rect.width);
+      const width = Math.max(320, rect.width);
       const height = Math.max(200, rect.height);
 
       if (!rows.length || !sourceNames.length) {
@@ -311,8 +684,8 @@
       const rightMargin = Math.max(44, totalStr.length * 7 + 18);
 
       const margin = { top: 6, right: rightMargin, bottom: 22, left: yLabelWidth + 10 };
-      const innerWidth  = Math.max(40, width  - margin.left - margin.right);
-      const innerHeight = Math.max(40, height - margin.top  - margin.bottom);
+      const innerWidth = Math.max(40, width - margin.left - margin.right);
+      const innerHeight = Math.max(40, height - margin.top - margin.bottom);
 
       const svg = d3.select(container).append("svg")
         .attr("width", width).attr("height", height)
@@ -321,11 +694,7 @@
 
       const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-      const y = d3.scaleBand()
-        .domain(rows.map(r => r[keyField]))
-        .range([0, innerHeight])
-        .paddingInner(0.22);
-
+      const y = d3.scaleBand().domain(rows.map(r => r[keyField])).range([0, innerHeight]).paddingInner(0.22);
       const x = d3.scaleLinear().domain([0, maxTotal * 1.05]).nice().range([0, innerWidth]);
 
       g.append("g").attr("class", "grid-lines")
@@ -334,12 +703,11 @@
         .select(".domain").remove();
 
       const stackData = d3.stack().keys(sourceNames)(rows);
-
       const layers = g.selectAll(".layer").data(stackData).enter()
-        .append("g")
-        .attr("fill", (_, i) => colorBySource[sourceNames[i]]);
+        .append("g").attr("fill", (_, i) => colorBySource[sourceNames[i]]);
 
-      layers.selectAll("rect").data(d => d.map(seg => ({ seg, source: d.key }))).enter()
+      layers.selectAll("rect")
+        .data(d => d.map(seg => ({ seg, source: d.key }))).enter()
         .append("rect")
           .attr("y", d => y(d.seg.data[keyField]))
           .attr("height", y.bandwidth())
@@ -348,12 +716,9 @@
           .on("mousemove", (evt, d) => {
             const row = d.seg.data;
             const rowsHtml = sourceNames
-              .map(sn => `<div class="tt-row"><span><span class="tt-swatch" style="background:${colorBySource[sn]}"></span>${sn}</span><span class="tt-num">${d3.format(",")(row[sn] || 0)}</span></div>`)
+              .map(sn => `<div class="tt-row"><span><span class="tt-swatch" style="background:${colorBySource[sn]}"></span>${escapeHtml(sn)}</span><span class="tt-num">${d3.format(",")(row[sn] || 0)}</span></div>`)
               .join("");
-            showTooltip(
-              `<div class="tt-title">${row[labelField]}</div>${rowsHtml}<div class="tt-row" style="margin-top:3px;border-top:1px solid #475569;padding-top:3px"><span>total</span><span class="tt-num">${d3.format(",")(row.__total)}</span></div>`,
-              evt
-            );
+            showTooltip(`<div class="tt-title">${escapeHtml(row[labelField])}</div>${rowsHtml}<div class="tt-row" style="margin-top:3px;border-top:1px solid #475569;padding-top:3px"><span>total</span><span class="tt-num">${d3.format(",")(row.__total)}</span></div>`, evt);
           })
           .on("mouseleave", hideTooltip)
         .transition().duration(700).ease(d3.easeCubicOut).delay((_, i) => i * 6)
@@ -397,16 +762,8 @@
           byName[name].__total += count;
         });
       });
-      const rows = Object.values(byName)
-        .sort((a, b) => b.__total - a.__total)
-        .slice(0, TOP_N_DIVISIONS);
-
-      stackedBarChart({
-        container,
-        rows,
-        keyField: "sector",
-        labelField: "sector",
-      });
+      const rows = Object.values(byName).sort((a, b) => b.__total - a.__total).slice(0, TOP_N_DIVISIONS);
+      stackedBarChart({ container, rows, keyField: "sector", labelField: "sector" });
     }
 
     function renderSections() {
@@ -428,39 +785,294 @@
           byCode[code].__total += count;
         });
       });
-      const rows = Object.values(byCode)
-        .filter(r => r.__total > 0)
-        .sort((a, b) => b.__total - a.__total);
-
-      stackedBarChart({
-        container,
-        rows,
-        keyField: "label",
-        labelField: "label",
-      });
+      const rows = Object.values(byCode).filter(r => r.__total > 0).sort((a, b) => b.__total - a.__total);
+      stackedBarChart({ container, rows, keyField: "label", labelField: "label" });
     }
 
+    // ─── Trace mode ─────────────────────────────────────────────────────────
+    function buildSectorNameLookup() {
+      const m = {};
+      (DATA.sectors || []).forEach(s => { m[s.division_code] = s.division_name; });
+      return m;
+    }
+
+    function renderTraceSourcePicker() {
+      const picker = document.getElementById("trace-source-picker");
+      picker.innerHTML = "";
+      const available = (DATA.trace_sources || []).length ? DATA.trace_sources : [];
+      if (!available.length) {
+        const opt = document.createElement("option");
+        opt.textContent = "(no traces built)";
+        opt.disabled = true;
+        picker.appendChild(opt);
+        picker.disabled = true;
+        return;
+      }
+      picker.disabled = false;
+      available.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        picker.appendChild(opt);
+      });
+      if (!traceCurrentSource || !available.includes(traceCurrentSource)) {
+        traceCurrentSource = available[0];
+      }
+      picker.value = traceCurrentSource;
+    }
+
+    async function loadTraceFor(source) {
+      if (traceCache[source]) return traceCache[source];
+      const resp = await fetch(TRACE_URL(source), { cache: "no-store" });
+      if (!resp.ok) throw new Error(`traces/${source}.json HTTP ${resp.status}`);
+      const data = await resp.json();
+      traceCache[source] = data;
+      return data;
+    }
+
+    function renderTraceList() {
+      const listEl = document.getElementById("trace-list");
+      const metaEl = document.getElementById("trace-list-meta");
+      listEl.innerHTML = "";
+      const trace = traceCache[traceCurrentSource];
+      if (!trace) {
+        listEl.innerHTML = `<div class="empty-note">Select a source above.</div>`;
+        metaEl.textContent = "—";
+        return;
+      }
+      const needle = traceFilter.trim().toLowerCase();
+      const filtered = needle
+        ? trace.tags.filter(t => t.tag_name.toLowerCase().includes(needle) || t.description.toLowerCase().includes(needle))
+        : trace.tags;
+      const MAX_RENDER = 500;
+      const rendered = filtered.slice(0, MAX_RENDER);
+      rendered.forEach(t => {
+        const row = document.createElement("div");
+        row.className = "trace-row" + (t.tag_id === traceCurrentTagId ? " active" : "");
+        row.dataset.tagId = t.tag_id;
+        const nPicks = (t.picks || []).length;
+        const countClass = nPicks === 0 ? "trace-row-count no-pick" : "trace-row-count";
+        const countLabel = nPicks === 0 ? "no pick" : `${nPicks} pick${nPicks === 1 ? "" : "s"}`;
+        row.innerHTML = `
+          <span class="trace-row-name" title="${escapeHtml(t.tag_name)}">${escapeHtml(t.tag_name)}</span>
+          <span class="${countClass}">${countLabel}</span>`;
+        row.addEventListener("click", () => {
+          traceCurrentTagId = t.tag_id;
+          document.querySelectorAll(".trace-row.active").forEach(r => r.classList.remove("active"));
+          row.classList.add("active");
+          renderTraceDetail();
+        });
+        listEl.appendChild(row);
+      });
+      metaEl.textContent = `${filtered.length.toLocaleString()} tag${filtered.length === 1 ? "" : "s"}`
+        + (needle ? ` (filtered from ${trace.tags.length.toLocaleString()})` : "")
+        + (filtered.length > MAX_RENDER ? ` · showing first ${MAX_RENDER}` : "");
+    }
+
+    function renderTraceDetail() {
+      const body = document.getElementById("trace-detail");
+      const trace = traceCache[traceCurrentSource];
+      if (!trace || !traceCurrentTagId) {
+        body.innerHTML = `<div class="empty-note">Pick a tag on the left to trace its path through the pipeline.</div>`;
+        return;
+      }
+      const tag = trace.tags.find(t => t.tag_id === traceCurrentTagId);
+      if (!tag) {
+        body.innerHTML = `<div class="empty-note">Tag not found in loaded trace.</div>`;
+        return;
+      }
+      const sectorName = buildSectorNameLookup();
+
+      const keysHtml = (tag.keys || []).map(k => `<span class="trace-key-chip">${escapeHtml(k)}</span>`).join("");
+      const keysOverflow = tag.n_keys && tag.n_keys > tag.keys.length
+        ? `<span class="trace-key-chip" style="background:transparent;color:#94a3b8">+ ${tag.n_keys - tag.keys.length} more</span>`
+        : "";
+
+      const picksHtml = (tag.picks || []).length
+        ? `<div class="trace-picks">` + tag.picks.map(p => `
+            <div class="trace-pick">
+              <div class="trace-pick-header">
+                <span class="trace-pick-name">${escapeHtml(p.division_name || sectorName[p.code] || "?")} <span class="trace-pick-code">[${escapeHtml(p.code)}]</span></span>
+                <span class="trace-pick-sim">${p.similarity != null ? p.similarity.toFixed(3) : "—"}</span>
+              </div>
+              <div class="trace-pick-reason">${escapeHtml(p.reason || "(no reason)")}</div>
+            </div>`).join("") + `</div>`
+        : `<div class="trace-picks-empty">LLM returned no picks for this tag — often the right signal for gibberish, placeholders, or tags that fall outside NACE.</div>`;
+
+      body.innerHTML = `
+        <div class="trace-block">
+          <div class="trace-block-label">Tag</div>
+          <div class="trace-tag-name">${escapeHtml(tag.tag_name)}</div>
+        </div>
+        <div class="trace-block">
+          <div class="trace-block-label">Description (embedded alongside the tag name)</div>
+          <div class="trace-description">${escapeHtml(tag.description || "(empty)")}</div>
+        </div>
+        <div class="trace-block">
+          <div class="trace-block-label">Keys in source (${tag.n_keys ?? (tag.keys || []).length})</div>
+          <div class="trace-keys">${keysHtml || `<span class="trace-key-chip" style="background:transparent;color:#94a3b8">none</span>`}${keysOverflow}</div>
+        </div>
+        <div class="trace-block">
+          <div class="trace-block-label">Picks</div>
+          ${picksHtml}
+        </div>
+        <div class="trace-block">
+          <div class="trace-block-label">Top ${(tag.candidates || []).length} candidates by cosine similarity</div>
+          <div id="trace-candidates-chart"></div>
+        </div>`;
+      drawCandidatesChart(tag, sectorName);
+    }
+
+    function drawCandidatesChart(tag, sectorName) {
+      const container = document.getElementById("trace-candidates-chart");
+      if (!container) return;
+      const cands = tag.candidates || [];
+      if (!cands.length) {
+        container.innerHTML = `<div class="empty-note">No candidates computed (sector embeddings missing at build time).</div>`;
+        return;
+      }
+      container.innerHTML = "";
+      const rect = container.getBoundingClientRect();
+      const width = Math.max(320, rect.width);
+      const rowHeight = 18;
+      const height = Math.max(200, cands.length * rowHeight + 40);
+
+      const maxLabel = d3.max(cands, c => (sectorName[c.code] || c.code).length);
+      const axisFont = 11;
+      const leftMargin = Math.min(width * 0.5, maxLabel * (axisFont * 0.55) + 14);
+      const margin = { top: 6, right: 60, bottom: 22, left: leftMargin + 10 };
+      const innerWidth = Math.max(40, width - margin.left - margin.right);
+      const innerHeight = Math.max(40, height - margin.top - margin.bottom);
+
+      const svg = d3.select(container).append("svg")
+        .attr("width", width).attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .style("width", "100%").style("height", height + "px");
+      const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const y = d3.scaleBand().domain(cands.map(c => c.code)).range([0, innerHeight]).paddingInner(0.22);
+      const maxSim = d3.max(cands, c => c.similarity) || 1;
+      const x = d3.scaleLinear().domain([0, maxSim * 1.05]).nice().range([0, innerWidth]);
+
+      g.append("g").attr("class", "grid-lines")
+        .attr("transform", `translate(0,${innerHeight})`)
+        .call(d3.axisBottom(x).ticks(5).tickSize(-innerHeight).tickFormat(""))
+        .select(".domain").remove();
+
+      g.selectAll(".bar").data(cands).enter().append("rect")
+        .attr("y", c => y(c.code))
+        .attr("height", y.bandwidth())
+        .attr("x", 0)
+        .attr("width", 0)
+        .attr("fill", c => c.picked ? "#10b981" : "#cbd5e1")
+        .attr("stroke", c => c.picked ? "#047857" : "transparent")
+        .transition().duration(600).ease(d3.easeCubicOut).delay((_, i) => i * 20)
+        .attr("width", c => x(c.similarity));
+
+      g.append("g").attr("class", "axis")
+        .call(d3.axisLeft(y).tickFormat(code => truncate(sectorName[code] || code, Math.floor(leftMargin / (axisFont * 0.55)))))
+        .selectAll("text")
+          .style("font-size", `${axisFont}px`)
+          .style("font-family", "system-ui, -apple-system, Segoe UI, Roboto, sans-serif");
+
+      g.append("g").attr("class", "axis")
+        .attr("transform", `translate(0,${innerHeight})`)
+        .call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(".2f")))
+        .selectAll("text")
+          .style("font-family", "system-ui, -apple-system, Segoe UI, Roboto, sans-serif");
+
+      g.selectAll(".sim-label").data(cands).enter().append("text")
+        .attr("class", "bar-label")
+        .attr("x", c => x(c.similarity) + 5)
+        .attr("y", c => y(c.code) + y.bandwidth() / 2)
+        .attr("dy", "0.35em")
+        .style("font-family", "system-ui, -apple-system, Segoe UI, Roboto, sans-serif")
+        .style("font-size", `${axisFont - 1}px`)
+        .text(c => c.similarity.toFixed(3));
+    }
+
+    async function enterTraceMode() {
+      renderTraceSourcePicker();
+      if (!traceCurrentSource) {
+        document.getElementById("trace-list").innerHTML = `<div class="empty-note">No trace data on disk. Run <code>python main.py build-dashboard</code> after a pipeline run to generate per-source trace JSONs.</div>`;
+        return;
+      }
+      document.getElementById("trace-list").innerHTML = `<div class="empty-note">loading ${traceCurrentSource}…</div>`;
+      try {
+        await loadTraceFor(traceCurrentSource);
+        renderTraceList();
+      } catch (e) {
+        document.getElementById("trace-list").innerHTML = `<div class="empty-note" style="color:#dc2626">Failed to load trace: ${escapeHtml(e.message)}</div>`;
+      }
+    }
+
+    // ─── Mode switching ─────────────────────────────────────────────────────
+    function applyMode() {
+      document.querySelectorAll("#mode-toggle .selector-button").forEach(b => {
+        b.classList.toggle("active", b.dataset.mode === mode);
+      });
+      document.querySelectorAll(".mode-overview").forEach(el => el.hidden = (mode !== "overview"));
+      document.querySelectorAll(".mode-trace").forEach(el => el.hidden = (mode !== "trace"));
+      if (mode === "overview") {
+        renderTopDivisions();
+        renderSections();
+      } else {
+        enterTraceMode();
+      }
+    }
+
+    document.getElementById("mode-toggle").addEventListener("click", (e) => {
+      const btn = e.target.closest(".selector-button");
+      if (!btn) return;
+      mode = btn.dataset.mode;
+      applyMode();
+    });
+
+    document.getElementById("trace-source-picker").addEventListener("change", async (e) => {
+      traceCurrentSource = e.target.value;
+      traceCurrentTagId = null;
+      document.getElementById("trace-list").innerHTML = `<div class="empty-note">loading ${traceCurrentSource}…</div>`;
+      try {
+        await loadTraceFor(traceCurrentSource);
+        renderTraceList();
+        renderTraceDetail();
+      } catch (err) {
+        document.getElementById("trace-list").innerHTML = `<div class="empty-note" style="color:#dc2626">${escapeHtml(err.message)}</div>`;
+      }
+    });
+
+    let searchTimer;
+    document.getElementById("trace-search").addEventListener("input", (e) => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        traceFilter = e.target.value;
+        renderTraceList();
+      }, 120);
+    });
+
+    // ─── Initial render + resize ────────────────────────────────────────────
     function renderAll() {
       renderMeta();
       renderKPIs();
       renderLegend();
-      renderTopDivisions();
-      renderSections();
+      applyMode();
     }
 
-    // Debounced resize
     let resizeTimer;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(renderAll, 180);
+      resizeTimer = setTimeout(() => {
+        if (mode === "overview") {
+          renderTopDivisions();
+          renderSections();
+        } else if (traceCurrentTagId) {
+          renderTraceDetail();
+        }
+      }, 180);
     });
 
-    // Load data
     fetch(DATA_URL, { cache: "no-store" })
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(d => {
         DATA = d;
         sourceNames = DATA.sources.map(s => s.source);
@@ -469,8 +1081,9 @@
       })
       .catch(err => {
         document.getElementById("meta").innerHTML =
-          `<span style="color:#dc2626">Failed to load ${DATA_URL}: ${err.message}. Run <code>python main.py build-dashboard</code> first.</span>`;
+          `<span style="color:#dc2626">Failed to load ${DATA_URL}: ${escapeHtml(err.message)}. Run <code>python main.py build-dashboard</code> first.</span>`;
       });
   </script>
 </body>
+
 </html>
