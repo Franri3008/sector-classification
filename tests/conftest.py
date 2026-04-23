@@ -10,7 +10,13 @@ import pytest
 from src.config import settings
 from src.embeddings.base import EmbeddingProvider
 from src.llm.base import LLMClient
-from src.llm.schemas import ClassificationResult, DescriptionResult, SectorPick
+from src.llm.schemas import (
+    ClassificationResult,
+    DescriptionResult,
+    SectorEnrichmentResult,
+    SectorKeywords,
+    SectorPick,
+)
 
 
 class FakeEmbedder(EmbeddingProvider):
@@ -37,6 +43,7 @@ class FakeLLM(LLMClient):
     def __init__(self) -> None:
         self.describe_calls = 0
         self.classify_calls = 0
+        self.enrich_calls = 0
 
     def describe(self, tag_name: str, source: str) -> DescriptionResult:
         self.describe_calls += 1
@@ -53,6 +60,22 @@ class FakeLLM(LLMClient):
             for c in candidates[:2]
         ]
         return ClassificationResult(tag_name=tag_name, picks=picks)
+
+    def enrich_sectors(
+        self, section_code: str, section_name: str, divisions: list[dict]
+    ) -> SectorEnrichmentResult:
+        self.enrich_calls += 1
+        return SectorEnrichmentResult(
+            section_code=section_code,
+            divisions=[
+                SectorKeywords(
+                    division_code=d["division_code"],
+                    broad_keywords=[f"broad-{d['division_code']}-a", f"broad-{d['division_code']}-b"],
+                    distinctive_keywords=[f"distinct-{d['division_code']}"],
+                )
+                for d in divisions
+            ],
+        )
 
 
 @pytest.fixture

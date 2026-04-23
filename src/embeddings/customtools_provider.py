@@ -8,6 +8,7 @@ import pandas as pd
 from src.config import settings
 from src.embeddings.base import EmbeddingProvider
 from src.logging_setup import get_logger
+from src.pipeline.summary import record_usage
 from src.utils.retry import retryable
 
 logger = get_logger(__name__)
@@ -42,4 +43,8 @@ class CustomToolsEmbeddingProvider(EmbeddingProvider):
         dim_cols.sort(key=lambda c: int(c[1:]))
         arr = out[dim_cols].to_numpy(dtype=np.float32)
         self.dim = arr.shape[1]
+        est_tokens = sum(len(t) for t in texts) // 4
+        record_usage(
+            provider="openai", model=self.model_id, input_tokens=est_tokens, estimated=True
+        )
         return arr

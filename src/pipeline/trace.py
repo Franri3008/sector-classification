@@ -15,8 +15,7 @@ from src.llm.prompts import CLASSIFY_SYSTEM, DESCRIBE_SYSTEM, classify_user, des
 from src.pipeline.classify import classification_cache_path
 from src.pipeline.descriptions import _cache_path as desc_cache_path
 from src.pipeline.embed_tags import cache_paths as tag_emb_cache_paths
-from src.pipeline.sectors import _cache_paths as sector_cache_paths
-from src.pipeline.sectors import load_sectors
+from src.pipeline.sectors import latest_embedding_cache, load_sectors
 from src.sources.registry import get_adapter
 from src.utils.hashing import normalize_tag
 from src.utils.hashing import tag_id as compute_tag_id
@@ -120,9 +119,9 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
         emb_step.note = "no cached tag embedding"
     trace.steps.append(emb_step)
     ranking_step = TraceStep(name="full_ranking")
-    sec_npz_path, _ = sector_cache_paths()
+    sec_npz_path = latest_embedding_cache()
     ranking_df: pd.DataFrame | None = None
-    if tag_vec is not None and sec_npz_path.exists():
+    if tag_vec is not None and sec_npz_path is not None and sec_npz_path.exists():
         sec_cache = read_npz(sec_npz_path)
         sec_codes = sec_cache["division_code"].tolist()
         sec_emb = sec_cache["emb"]
@@ -135,7 +134,7 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
         ranking_df = ranking_df.sort_values("similarity", ascending=False).reset_index(drop=True)
         ranking_df["rank"] = ranking_df.index + 1
     ranking_step.data = {
-        "sector_cache": str(sec_npz_path),
+        "sector_cache": str(sec_npz_path) if sec_npz_path else "(none)",
         "rows": ranking_df[
             ["rank", "similarity", "division_code", "division_name", "section_code", "section_name"]
         ].to_dict(orient="records")

@@ -36,3 +36,40 @@ def classify_user(tag_name: str, tag_description: str, candidates: list[dict]) -
     lines.append("")
     lines.append("Return the division_codes that genuinely fit this tag.")
     return "\n".join(lines)
+
+
+ENRICH_SECTORS_SYSTEM = (
+    "You enrich NACE Rev. 2 sector divisions with keywords used to match free-form tags "
+    "(research topics, business categories, patent classes, skills) against sectors via "
+    "semantic similarity.\n"
+    "You will receive ALL divisions belonging to a single NACE section. For EACH division you "
+    "return two keyword lists:\n"
+    "1. `broad_keywords` (8-12): what this sector typically encompasses. These ATTRACT relevant "
+    "tags — include common activities, materials, deliverables, technologies, sub-fields, "
+    "canonical examples. Think 'what would a domain expert first associate with this sector'.\n"
+    "2. `distinctive_keywords` (4-6): what specifically sets this division APART from the OTHER "
+    "divisions shown in the same section. These must not appear (literally or as near-synonyms) "
+    "in the broad/distinctive lists of sibling divisions. Pick the activities, materials, or "
+    "processes that only this division does.\n"
+    "Rules: single terms or short phrases (1-3 words). Lowercase. Concrete nouns/verbs — avoid "
+    "vague words like 'activity', 'service', 'innovation', 'technology', 'system'. No overlap "
+    "between broad and distinctive for the same division. No overlap in distinctive across "
+    "siblings (that's the whole point of distinctive). Respond with JSON matching the schema."
+)
+
+
+def enrich_sectors_user(
+    section_code: str, section_name: str, divisions: list[dict]
+) -> str:
+    lines = [
+        f"NACE section: {section_code} — {section_name}",
+        f"Divisions in this section ({len(divisions)}):",
+    ]
+    for d in divisions:
+        lines.append(f"- {d['division_code']}: {d['division_name']}")
+    lines.append("")
+    lines.append(
+        "For every division above, return broad + distinctive keywords. "
+        "Distinctive lists must not overlap across these siblings."
+    )
+    return "\n".join(lines)

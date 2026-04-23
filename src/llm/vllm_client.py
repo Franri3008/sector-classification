@@ -6,9 +6,17 @@ from pydantic import BaseModel, ValidationError
 
 from src.config import settings
 from src.llm.base import LLMClient
-from src.llm.prompts import CLASSIFY_SYSTEM, DESCRIBE_SYSTEM, classify_user, describe_user
-from src.llm.schemas import ClassificationResult, DescriptionResult
+from src.llm.prompts import (
+    CLASSIFY_SYSTEM,
+    DESCRIBE_SYSTEM,
+    ENRICH_SECTORS_SYSTEM,
+    classify_user,
+    describe_user,
+    enrich_sectors_user,
+)
+from src.llm.schemas import ClassificationResult, DescriptionResult, SectorEnrichmentResult
 from src.logging_setup import get_logger
+from src.pipeline.summary import record_usage
 from src.utils.retry import retryable
 
 logger = get_logger(__name__)
@@ -36,6 +44,14 @@ class VLLMClient(LLMClient):
             response_format=schema,
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
         )
+        usage = getattr(resp, "usage", None)
+        if usage is not None:
+            record_usage(
+                provider="vllm",
+                model=self.model_id,
+                input_tokens=getattr(usage, "prompt_tokens", 0) or 0,
+                output_tokens=getattr(usage, "completion_tokens", 0) or 0,
+            )
         parsed = resp.choices[0].message.parsed
         if parsed is None:
             raise RuntimeError(
@@ -59,3 +75,17 @@ class VLLMClient(LLMClient):
         except ValidationError as e:
             logger.warning("classify schema failed for %r (returning empty picks): %s", tag_name, e)
             return ClassificationResult(tag_name=tag_name, picks=[])
+
+    def enrich_sectors(
+        self, section_code: str, section_name: str, divisions: list[dict]
+    ) -> SectorEnrichmentResult:
+        user = enrich_sectors_user(section_code, section_name, divisions)
+        try:
+            return self._parse(ENRICH_SECTORS_SYSTEM, user, SectorEnrichmentResult)
+        except ValidationError as e:
+            logger.warning(
+                "enrich_sectors schema failed for section %s (returning empty): %s",
+                section_code,
+                e,
+            )
+            return SectorEnrichmentResult(section_code=section_code, divisions=[])

@@ -54,7 +54,7 @@ def run_source(
     )
     unique_tags = tags_to_keys.drop_duplicates("tag_id")[keep_cols]
     tags_with_desc = ensure_descriptions(source, unique_tags, llm, force=force)
-    sectors = embed_sectors(embedder, force=force)
+    sectors = embed_sectors(embedder, llm=llm, force=force)
     sector_emb = np.stack(sectors["embedding"].to_numpy())
     if skip_embed:
         from src.pipeline.embed_tags import load_cached_embeddings

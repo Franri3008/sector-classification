@@ -34,10 +34,12 @@ def test_cache_reuse_on_second_run(tmp_project, fake_embedder, fake_llm):
     run_source("openalex", embedder=fake_embedder, llm=fake_llm)
     describe_after_first = fake_llm.describe_calls
     classify_after_first = fake_llm.classify_calls
+    enrich_after_first = fake_llm.enrich_calls
     embed_after_first = fake_embedder.calls
     run_source("openalex", embedder=fake_embedder, llm=fake_llm)
     assert fake_llm.describe_calls == describe_after_first
     assert fake_llm.classify_calls == classify_after_first
+    assert fake_llm.enrich_calls == enrich_after_first
     assert fake_embedder.calls == embed_after_first
 
 

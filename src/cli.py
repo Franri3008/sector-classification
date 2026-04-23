@@ -31,13 +31,13 @@ def run_all_cmd(force: bool = typer.Option(False, "--force", help="Ignore caches
     import time
 
     from src.pipeline.runner import run_all
-    from src.pipeline.summary import capture_warnings, format_report
+    from src.pipeline.summary import capture_usage, capture_warnings, format_report
 
     t0 = time.perf_counter()
-    with capture_warnings() as warnings:
+    with capture_warnings() as warnings, capture_usage() as usage:
         summaries = run_all(force=force)
     typer.echo("")
-    typer.echo(format_report(summaries, warnings, time.perf_counter() - t0))
+    typer.echo(format_report(summaries, warnings, time.perf_counter() - t0, usage=usage))
 
 
 @app.command("run")
@@ -53,13 +53,13 @@ def run_cmd(
     import time
 
     from src.pipeline.runner import run_source
-    from src.pipeline.summary import capture_warnings, format_report
+    from src.pipeline.summary import capture_usage, capture_warnings, format_report
 
     t0 = time.perf_counter()
-    with capture_warnings() as warnings:
+    with capture_warnings() as warnings, capture_usage() as usage:
         summary = run_source(source.value, force=force, skip_embed=skip_embed)
     typer.echo("")
-    typer.echo(format_report([summary], warnings, time.perf_counter() - t0))
+    typer.echo(format_report([summary], warnings, time.perf_counter() - t0, usage=usage))
 
 
 @app.command("sync")
@@ -79,12 +79,22 @@ def sync_cmd(
         typer.echo(f"  {len(downloaded)} file(s) downloaded")
 
 
+@app.command("enrich-sectors")
+def enrich_sectors_cmd(force: bool = typer.Option(False, "--force")) -> None:
+    from src.llm.factory import build_llm_client
+    from src.pipeline.sectors import enrich_sectors
+
+    enriched = enrich_sectors(build_llm_client(), force=force)
+    typer.echo(f"enriched {len(enriched)} divisions")
+
+
 @app.command("embed-sectors")
 def embed_sectors_cmd(force: bool = typer.Option(False, "--force")) -> None:
     from src.embeddings.customtools_provider import CustomToolsEmbeddingProvider
+    from src.llm.factory import build_llm_client
     from src.pipeline.sectors import embed_sectors
 
-    embed_sectors(CustomToolsEmbeddingProvider(), force=force)
+    embed_sectors(CustomToolsEmbeddingProvider(), llm=build_llm_client(), force=force)
 
 
 @app.command("describe-tags")
