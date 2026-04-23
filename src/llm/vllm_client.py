@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TypeVar
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 from src.config import settings
 from src.llm.base import LLMClient
@@ -28,7 +28,7 @@ class VLLMClient(LLMClient):
             self._client = OpenAI(api_key="not-needed", base_url=self._base_url)
         return self._client
 
-    @retryable()
+    @retryable(exceptions=(ConnectionError, TimeoutError, RuntimeError))
     def _parse(self, system: str, user: str, schema: type[T]) -> T:
         resp = self._get_client().chat.completions.parse(
             model=self.model_id,
@@ -44,11 +44,18 @@ class VLLMClient(LLMClient):
         return parsed
 
     def describe(self, tag_name: str, source: str) -> DescriptionResult:
-        user = describe_user(tag_name, source)
-        return self._parse(DESCRIBE_SYSTEM, user, DescriptionResult)
+        try:
+            return self._parse(DESCRIBE_SYSTEM, describe_user(tag_name, source), DescriptionResult)
+        except ValidationError as e:
+            logger.warning("describe schema failed for %r (skipping): %s", tag_name, e)
+            return DescriptionResult(tag_name=tag_name, description="")
 
     def classify(
         self, tag_name: str, tag_description: str, candidates: list[dict]
     ) -> ClassificationResult:
         user = classify_user(tag_name, tag_description, candidates)
-        return self._parse(CLASSIFY_SYSTEM, user, ClassificationResult)
+        try:
+            return self._parse(CLASSIFY_SYSTEM, user, ClassificationResult)
+        except ValidationError as e:
+            logger.warning("classify schema failed for %r (returning empty picks): %s", tag_name, e)
+            return ClassificationResult(tag_name=tag_name, picks=[])

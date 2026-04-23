@@ -4,6 +4,14 @@ import logging
 import sys
 
 _CONFIGURED = False
+_NOISY_LOGGERS = (
+    "httpx",
+    "httpcore",
+    "openai",
+    "openai._base_client",
+    "urllib3",
+    "dropbox",
+)
 
 
 def setup_logging(level: str = "INFO") -> None:
@@ -16,6 +24,8 @@ def setup_logging(level: str = "INFO") -> None:
         datefmt="%Y-%m-%dT%H:%M:%S",
         handlers=[logging.StreamHandler(sys.stdout)],
     )
+    for name in _NOISY_LOGGERS:
+        logging.getLogger(name).setLevel(logging.WARNING)
     _CONFIGURED = True
 
 

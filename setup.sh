@@ -11,7 +11,7 @@ VLLM_MODEL="${VLLM_MODEL:-google/gemma-4-E2B-it}"
 VLLM_SERVED_NAME="${VLLM_SERVED_NAME:-gemma4}"
 VLLM_PORT="${VLLM_PORT:-8001}"
 VLLM_GPU_UTIL="${VLLM_GPU_UTIL:-0.85}"
-VLLM_MAX_LEN="${VLLM_MAX_LEN:-4096}"
+VLLM_MAX_LEN="${VLLM_MAX_LEN:-8192}"
 VLLM_MAX_SEQS="${VLLM_MAX_SEQS:-32}"
 VLLM_QUANTIZATION="${VLLM_QUANTIZATION:-fp8}"
 VLLM_LOG="${VLLM_LOG:-/tmp/vllm.log}"
@@ -104,8 +104,8 @@ cat <<EOF
 
   1.  Edit .env (already copied from .env.example?) and fill in:
          DROPBOX_TOKEN, OPENAI_API_KEY, HF_TOKEN,
-         LLM_BACKEND=vllm
-         VLLM_BASE_URL=http://localhost:${VLLM_PORT}/v1
+         LLM__BACKEND=vllm
+         LLM__VLLM_BASE_URL=http://localhost:${VLLM_PORT}/v1
          LLM__VLLM_MODEL=${VLLM_SERVED_NAME}
 
   2.  Sanity-check vLLM:

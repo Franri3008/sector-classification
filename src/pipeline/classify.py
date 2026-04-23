@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import pandas as pd
+from tqdm.auto import tqdm
 
 from src.config import settings
 from src.io.local_cache import read_parquet, write_parquet
@@ -44,7 +45,15 @@ def classify_tags(
     cached_ids = set(cached["tag_id"].unique())
     new_rows: list[dict] = []
     tags_since_checkpoint = 0
-    for row, cands in zip(tags.itertuples(index=False), candidates, strict=True):
+    todo = len(tags) - sum(1 for t in tags["tag_id"] if t in cached_ids)
+    bar = tqdm(
+        zip(tags.itertuples(index=False), candidates, strict=True),
+        total=todo,
+        desc=f"classify[{source}]",
+        unit="tag",
+        leave=False,
+    )
+    for row, cands in bar:
         if row.tag_id in cached_ids:
             continue
         if not cands:

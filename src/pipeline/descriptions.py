@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import pandas as pd
+from tqdm.auto import tqdm
 
 from src.config import settings
 from src.io.local_cache import read_parquet, write_parquet
@@ -52,7 +53,13 @@ def ensure_descriptions(
                 }
             )
     else:
-        for row in missing.itertuples(index=False):
+        for row in tqdm(
+            missing.itertuples(index=False),
+            total=len(missing),
+            desc=f"describe[{source}]",
+            unit="tag",
+            leave=False,
+        ):
             result = llm.describe(row.tag_name, source)
             new_rows.append(
                 {
