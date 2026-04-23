@@ -244,7 +244,6 @@
       color: #334155; line-height: 1.45;
       background: #f8fafc; border-radius: 4px;
       padding: 8px 10px;
-      border-left: 3px solid #cbd5e1;
     }
     .trace-tag-name {
       font-size: clamp(14px, 1.7vw, 17px);
@@ -271,9 +270,9 @@
 
     .trace-picks { display: flex; flex-direction: column; gap: 6px; }
     .trace-pick {
-      border-left: 3px solid #10b981;
-      background: rgba(16, 185, 129, 0.05);
-      padding: 6px 10px; border-radius: 3px;
+      background: #f8fafc;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      padding: 8px 10px; border-radius: 4px;
       display: flex; flex-direction: column; gap: 3px;
     }
     .trace-pick-header {
@@ -281,26 +280,25 @@
     }
     .trace-pick-name {
       font-weight: 700; font-size: clamp(11px, 1.3vw, 13px);
-      color: #065f46;
+      color: #111;
     }
     .trace-pick-code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.9em; color: #047857;
+      font-size: 0.9em; color: #64748b; font-weight: 500;
     }
     .trace-pick-sim {
       font-variant-numeric: tabular-nums;
-      font-weight: 600; color: #047857; font-size: 0.9em;
+      font-weight: 600; color: #111; font-size: 0.9em;
     }
     .trace-pick-reason {
       font-size: clamp(10px, 1.2vw, 12px);
-      color: #334155; line-height: 1.4;
+      color: #475569; line-height: 1.4;
     }
     .trace-picks-empty {
-      font-style: italic; color: #b45309;
+      font-style: italic; color: #64748b;
       font-size: clamp(11px, 1.2vw, 13px);
-      background: rgba(180, 83, 9, 0.08);
-      padding: 8px 10px; border-radius: 3px;
-      border-left: 3px solid #f59e0b;
+      background: #f8fafc;
+      padding: 8px 10px; border-radius: 4px;
     }
 
     #trace-candidates-chart {
@@ -707,9 +705,8 @@
       const body = document.getElementById("trace-inspector");
       const sectorName = sectorNameLookup();
       const source = traceCurrentSource;
-      const color = colorBySource[source] || "#64748b";
 
-      const step1 = renderStep1InputRows(tag, color);
+      const step1 = renderStep1InputRows(tag);
       const step2 = renderStep2Description(tag);
       const step3 = renderStep3Embedding(tag);
       const step4 = renderStep4RankingPlaceholder();
@@ -735,7 +732,7 @@
         </div>`;
     }
 
-    function renderStep1InputRows(tag, color) {
+    function renderStep1InputRows(tag) {
       const keys = tag.keys || [];
       const nKeys = tag.n_keys ?? keys.length;
       const chips = keys.length
@@ -744,7 +741,7 @@
       const overflow = (keys.length && nKeys > keys.length)
         ? `<span class="trace-chip dim">+ ${nKeys - keys.length} more</span>` : "";
       const body = `
-        <div class="trace-tag-name"><span style="display:inline-block;width:10px;height:10px;background:${color};margin-right:8px;vertical-align:middle"></span>${escapeHtml(tag.tag_name)}</div>
+        <div class="trace-tag-name">${escapeHtml(tag.tag_name)}</div>
         <div class="trace-meta-row">source: <b>${escapeHtml(traceCurrentSource)}</b> · rows referencing this tag: <b>${nKeys}</b></div>
         <div class="trace-chips">${chips}${overflow}</div>`;
       return stepShell(1, "Input rows", body);

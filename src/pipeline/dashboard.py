@@ -104,6 +104,8 @@ def _build_trace_tags(
                 "reason": str(row.reason) if pd.notna(row.reason) else "",
             }
         )
+    for tag_picks in picks_by_tag.values():
+        tag_picks.sort(key=lambda p: (p["similarity"] is None, -(p["similarity"] or 0.0)))
 
     sector_codes_np = np.asarray(sector_codes, dtype=object)
     top_k = min(_TRACE_TOP_CANDIDATES, len(sector_codes))

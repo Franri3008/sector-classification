@@ -54,7 +54,14 @@ ENRICH_SECTORS_SYSTEM = (
     "Rules: single terms or short phrases (1-3 words). Lowercase. Concrete nouns/verbs — avoid "
     "vague words like 'activity', 'service', 'innovation', 'technology', 'system'. No overlap "
     "between broad and distinctive for the same division. No overlap in distinctive across "
-    "siblings (that's the whole point of distinctive). Respond with JSON matching the schema."
+    "siblings (that's the whole point of distinctive).\n"
+    "IMPORTANT: NACE Rev. 2 predates many current industries. Include modern/contemporary "
+    "examples wherever they apply — post-2010 technologies, processes, and products that a "
+    "present-day company in this division would plausibly do (e.g. additive manufacturing / 3D "
+    "printing in machinery or metal/plastic processing; IoT sensors in electronics; cloud "
+    "computing and SaaS in IT; synthetic biology in pharma; electric vehicles in automotive). "
+    "Include at least one modern example per division where one reasonably exists, alongside the "
+    "canonical classical activities. Respond with JSON matching the schema."
 )
 
 
