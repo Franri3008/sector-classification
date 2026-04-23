@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import pandas as pd
@@ -27,6 +27,43 @@ def _model_id() -> str:
     )
 
 
+def _rows_for_empty(tag_id: str) -> list[dict]:
+    return [
+        {
+            "tag_id": tag_id,
+            "division_code": None,
+            "reason": None,
+            "similarity": None,
+            "raw_json": "{}",
+        }
+    ]
+
+
+def _rows_from_result(tag_id: str, result, cands: list[dict]) -> list[dict]:
+    raw = result.model_dump_json()
+    sim_by_code = {c["division_code"]: c["similarity"] for c in cands}
+    if not result.picks:
+        return [
+            {
+                "tag_id": tag_id,
+                "division_code": None,
+                "reason": None,
+                "similarity": None,
+                "raw_json": raw,
+            }
+        ]
+    return [
+        {
+            "tag_id": tag_id,
+            "division_code": pick.division_code,
+            "reason": pick.reason,
+            "similarity": sim_by_code.get(pick.division_code),
+            "raw_json": raw,
+        }
+        for pick in result.picks
+    ]
+
+
 def classify_tags(
     source: str,
     tags: pd.DataFrame,
@@ -43,65 +80,61 @@ def classify_tags(
         else pd.DataFrame(columns=["tag_id", "division_code", "reason", "similarity", "raw_json"])
     )
     cached_ids = set(cached["tag_id"].unique())
+
     new_rows: list[dict] = []
     tags_since_checkpoint = 0
-    todo = len(tags) - sum(1 for t in tags["tag_id"] if t in cached_ids)
-    bar = tqdm(
-        zip(tags.itertuples(index=False), candidates, strict=True),
-        total=todo,
-        desc=f"classify[{source}]",
-        unit="tag",
-        leave=False,
-    )
-    for row, cands in bar:
+    todo: list[tuple] = []
+    for row, cands in zip(tags.itertuples(index=False), candidates, strict=True):
         if row.tag_id in cached_ids:
             continue
         if not cands:
-            new_rows.append(
-                {
-                    "tag_id": row.tag_id,
-                    "division_code": None,
-                    "reason": None,
-                    "similarity": None,
-                    "raw_json": "{}",
-                }
-            )
+            new_rows.extend(_rows_for_empty(row.tag_id))
             tags_since_checkpoint += 1
             continue
-        result = llm.classify(row.tag_name, row.description, cands)
-        raw = result.model_dump_json()
-        sim_by_code = {c["division_code"]: c["similarity"] for c in cands}
-        if not result.picks:
-            new_rows.append(
-                {
-                    "tag_id": row.tag_id,
-                    "division_code": None,
-                    "reason": None,
-                    "similarity": None,
-                    "raw_json": raw,
-                }
-            )
-        else:
-            for pick in result.picks:
-                new_rows.append(
-                    {
-                        "tag_id": row.tag_id,
-                        "division_code": pick.division_code,
-                        "reason": pick.reason,
-                        "similarity": sim_by_code.get(pick.division_code),
-                        "raw_json": raw,
-                    }
-                )
-        tags_since_checkpoint += 1
-        if tags_since_checkpoint >= 50:
-            cached = pd.concat([cached, pd.DataFrame(new_rows)], ignore_index=True)
-            write_parquet(cached, cache_path)
-            cached_ids.update(r["tag_id"] for r in new_rows)
-            new_rows = []
-            tags_since_checkpoint = 0
-    if new_rows:
+        todo.append((row, cands))
+
+    concurrency = max(1, settings.llm.max_concurrency)
+    logger.info(
+        "classify[%s]: %d tags to call LLM (concurrency=%d)", source, len(todo), concurrency
+    )
+
+    def _checkpoint() -> None:
+        nonlocal cached, new_rows, tags_since_checkpoint
+        if not new_rows:
+            return
         cached = pd.concat([cached, pd.DataFrame(new_rows)], ignore_index=True)
         write_parquet(cached, cache_path)
+        cached_ids.update(r["tag_id"] for r in new_rows)
+        new_rows = []
+        tags_since_checkpoint = 0
+
+    if todo:
+        with ThreadPoolExecutor(max_workers=concurrency) as pool:
+            futures = {
+                pool.submit(llm.classify, row.tag_name, row.description, cands): (row, cands)
+                for row, cands in todo
+            }
+            bar = tqdm(
+                as_completed(futures),
+                total=len(futures),
+                desc=f"classify[{source}]",
+                unit="tag",
+                leave=False,
+            )
+            for fut in bar:
+                row, cands = futures[fut]
+                try:
+                    result = fut.result()
+                except Exception as e:
+                    logger.warning("classify failed for %r: %s", row.tag_name, e)
+                    continue
+                new_rows.extend(_rows_from_result(row.tag_id, result, cands))
+                tags_since_checkpoint += 1
+                if tags_since_checkpoint >= 50:
+                    _checkpoint()
+
+    _checkpoint()
+
     wanted = set(tags["tag_id"])
     return cached[cached["tag_id"].isin(wanted)].reset_index(drop=True)
 
@@ -115,6 +148,3 @@ def load_classifications(source: str) -> pd.DataFrame:
 
 def classification_cache_path(source: str) -> Path:
     return _cache_path(source)
-
-
-_ = json
