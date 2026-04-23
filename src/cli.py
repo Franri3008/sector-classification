@@ -145,6 +145,15 @@ def postprocess_cmd(source: Source) -> None:
     typer.echo(f"wrote {n_rows} rows to {out_path}")
 
 
+@app.command("build-dashboard")
+def build_dashboard_cmd() -> None:
+    from src.pipeline.dashboard import build_dashboard_data
+
+    path = build_dashboard_data()
+    typer.echo(f"wrote {path}")
+    typer.echo("open dashboard/index.html with LiveServer to view.")
+
+
 @app.command("trace")
 def trace_cmd(
     source: Source,
