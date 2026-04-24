@@ -30,16 +30,30 @@ def build_output(
         tag_names.merge(picks, on="tag_id", how="inner")
         .merge(sectors, on="division_code", how="left")
     )
-    out = (
-        merged.rename(columns={"division_name": "source", "tag_name": "key", "confidence": "score"})
-        [["source", "key", "score"]]
+    populated = (
+        merged.rename(
+            columns={"division_name": "source", "tag_name": "key", "confidence": "score"}
+        )[["source", "key", "score"]]
         .dropna(subset=["source"])
         .drop_duplicates(subset=["source", "key"])
-        .sort_values(["key", "source"])
-        .reset_index(drop=True)
     )
+    all_sectors = (
+        sectors[["division_name"]].rename(columns={"division_name": "source"}).drop_duplicates()
+    )
+    out = all_sectors.merge(populated, on="source", how="left")
+    out = out.sort_values(
+        ["source", "score", "key"], ascending=[True, False, True], na_position="last"
+    ).reset_index(drop=True)
     out_path = settings.paths.outputs_dir / f"{source}__{run_id}.csv"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path, index=False)
-    logger.info("wrote %d rows to %s", len(out), out_path)
+    n_populated = int(out["key"].notna().sum())
+    n_empty_sectors = int(out["key"].isna().sum())
+    logger.info(
+        "wrote %d rows to %s (%d populated, %d empty sectors)",
+        len(out),
+        out_path,
+        n_populated,
+        n_empty_sectors,
+    )
     return out_path, len(out)

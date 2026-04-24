@@ -19,7 +19,7 @@ def _cache_path(source: str) -> Path:
     ranking = settings.ranking
     stem = (
         f"{settings.llm.backend}__{_model_id()}__{sectors_hash()}"
-        f"__topN{ranking.top_n}_floor{ranking.min_similarity}__single"
+        f"__topN{ranking.top_n}_floor{ranking.min_similarity}__multi"
     )
     return settings.paths.processed_dir / source / "classifications" / f"{stem}.parquet"
 
@@ -57,8 +57,6 @@ def _rows_from_result(tag_id: str, result, cands: list[dict]) -> list[dict]:
                 "raw_json": raw,
             }
         ]
-    # Single-pick policy: defensively take the first if the LLM gave more than one.
-    pick = result.picks[0]
     return [
         {
             "tag_id": tag_id,
@@ -68,6 +66,7 @@ def _rows_from_result(tag_id: str, result, cands: list[dict]) -> list[dict]:
             "similarity": sim_by_code.get(pick.division_code),
             "raw_json": raw,
         }
+        for pick in result.picks
     ]
 
 

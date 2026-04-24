@@ -784,7 +784,7 @@
           <div class="trace-pick-reason">${escapeHtml(p.reason || "(no reason)")}</div>
         </div>`;
       }).join("") + `</div>`;
-      const note = "The LLM's single best pick, with confidence score (0-1) and one-sentence reason.";
+      const note = "The LLM's picks (0 or more), each with its own confidence score (0-1) and one-sentence reason. Sorted highest-confidence first.";
       return stepShell(5, "Classification", body, note);
     }
 

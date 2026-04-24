@@ -26,9 +26,23 @@ def test_end_to_end_produces_csv(tmp_project, fake_embedder, fake_llm):
     df = pd.read_csv(summary.output_path)
     assert list(df.columns) == ["source", "key", "score"]
     assert len(df) == summary.output_rows
-    assert set(df["key"]) <= {"Machine learning", "Agriculture", "Education"}
-    assert df["score"].notna().all()
-    assert ((df["score"] >= 0) & (df["score"] <= 1)).all()
+
+    populated = df.dropna(subset=["key"])
+    assert len(populated) > 0
+    assert set(populated["key"]) <= {"Machine learning", "Agriculture", "Education"}
+    assert ((populated["score"] >= 0) & (populated["score"] <= 1)).all()
+
+    # Every unique sector from sectors.csv should appear at least once,
+    # even those without any tag picks.
+    sectors_csv = pd.read_csv(tmp_project / "sectors.csv")
+    expected_sectors = set(sectors_csv["division_name"].unique())
+    assert set(df["source"]) == expected_sectors
+
+    # Within each sector, rows are sorted by score descending (NaN last).
+    for _, group in df.groupby("source", sort=False):
+        scores = group["score"].tolist()
+        non_na = [s for s in scores if pd.notna(s)]
+        assert non_na == sorted(non_na, reverse=True)
 
 
 def test_cache_reuse_on_second_run(tmp_project, fake_embedder, fake_llm):

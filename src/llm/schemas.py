@@ -19,8 +19,8 @@ class ClassificationResult(BaseModel):
     tag_name: str
     picks: list[SectorPick] = Field(
         description=(
-            "Exactly zero or one element. Empty when no candidate is a genuinely "
-            "good fit. Never more than one."
+            "Every division that genuinely fits this tag. Can be empty (no fit), one, "
+            "or several. Each pick carries its own confidence score."
         )
     )
 
