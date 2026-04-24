@@ -24,9 +24,11 @@ def test_end_to_end_produces_csv(tmp_project, fake_embedder, fake_llm):
     assert summary.elapsed_s >= 0
     assert summary.output_rows > 0
     df = pd.read_csv(summary.output_path)
-    assert list(df.columns) == ["sector", "key"]
+    assert list(df.columns) == ["source", "key", "score"]
     assert len(df) == summary.output_rows
-    assert set(df["key"]) <= {"W1", "W2", "W3"}
+    assert set(df["key"]) <= {"Machine learning", "Agriculture", "Education"}
+    assert df["score"].notna().all()
+    assert ((df["score"] >= 0) & (df["score"] <= 1)).all()
 
 
 def test_cache_reuse_on_second_run(tmp_project, fake_embedder, fake_llm):

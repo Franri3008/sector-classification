@@ -20,16 +20,22 @@ def build_output(
 ) -> tuple[Path, int]:
     run_id = run_id or datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     sectors = load_sectors()[["division_code", "division_name"]]
-    picks = classifications.dropna(subset=["division_code"])[["tag_id", "division_code"]]
+    if "confidence" not in classifications.columns:
+        classifications = classifications.assign(confidence=None)
+    picks = classifications.dropna(subset=["division_code"])[
+        ["tag_id", "division_code", "confidence"]
+    ]
+    tag_names = tags_to_keys[["tag_id", "tag_name"]].drop_duplicates("tag_id")
     merged = (
-        tags_to_keys.merge(picks, on="tag_id", how="inner")
+        tag_names.merge(picks, on="tag_id", how="inner")
         .merge(sectors, on="division_code", how="left")
     )
     out = (
-        merged.rename(columns={"division_name": "sector"})[["sector", "key"]]
-        .dropna(subset=["sector"])
-        .drop_duplicates()
-        .sort_values(["key", "sector"])
+        merged.rename(columns={"division_name": "source", "tag_name": "key", "confidence": "score"})
+        [["source", "key", "score"]]
+        .dropna(subset=["source"])
+        .drop_duplicates(subset=["source", "key"])
+        .sort_values(["key", "source"])
         .reset_index(drop=True)
     )
     out_path = settings.paths.outputs_dir / f"{source}__{run_id}.csv"

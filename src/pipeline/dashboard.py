@@ -66,11 +66,17 @@ def _build_trace_tags(
         return []
 
     descriptions = read_parquet(desc_path)[["tag_id", "tag_name", "description"]]
-    classifications = (
-        read_parquet(cls_path)[["tag_id", "division_code", "similarity", "reason"]]
-        if cls_path.exists()
-        else pd.DataFrame(columns=["tag_id", "division_code", "similarity", "reason"])
-    )
+    if cls_path.exists():
+        cls_raw = read_parquet(cls_path)
+        if "confidence" not in cls_raw.columns:
+            cls_raw["confidence"] = None
+        classifications = cls_raw[
+            ["tag_id", "division_code", "similarity", "reason", "confidence"]
+        ]
+    else:
+        classifications = pd.DataFrame(
+            columns=["tag_id", "division_code", "similarity", "reason", "confidence"]
+        )
 
     keys_by_tag: dict[str, list[str]] = {}
     try:
@@ -101,11 +107,16 @@ def _build_trace_tags(
                 "similarity": (
                     float(row.similarity) if pd.notna(row.similarity) else None
                 ),
+                "confidence": (
+                    float(row.confidence) if pd.notna(row.confidence) else None
+                ),
                 "reason": str(row.reason) if pd.notna(row.reason) else "",
             }
         )
     for tag_picks in picks_by_tag.values():
-        tag_picks.sort(key=lambda p: (p["similarity"] is None, -(p["similarity"] or 0.0)))
+        tag_picks.sort(
+            key=lambda p: (p["confidence"] is None, -(p["confidence"] or 0.0))
+        )
 
     sector_codes_np = np.asarray(sector_codes, dtype=object)
     top_k = min(_TRACE_TOP_CANDIDATES, len(sector_codes))
@@ -146,6 +157,7 @@ def _build_trace_tags(
                         "code": p["code"],
                         "division_name": division_name.get(p["code"], ""),
                         "similarity": p["similarity"],
+                        "confidence": p["confidence"],
                         "reason": p["reason"],
                     }
                     for p in picks
@@ -182,11 +194,14 @@ def build_dashboard_data() -> Path:
             logger.warning("dashboard: no output found for %s", source)
             continue
         df = pd.read_csv(csv_path)
-        if not {"sector", "key"}.issubset(df.columns):
-            logger.warning("dashboard: %s missing required columns, skipping", csv_path)
+        if not {"source", "key", "score"}.issubset(df.columns):
+            logger.warning(
+                "dashboard: %s missing required columns (source, key, score), skipping",
+                csv_path,
+            )
             continue
 
-        by_division = df.groupby("sector").size().to_dict()
+        by_division = df.groupby("source").size().to_dict()
         by_section: dict[str, int] = {}
         for name, count in by_division.items():
             section = name_to_section.get(name)
@@ -202,7 +217,7 @@ def build_dashboard_data() -> Path:
                 "output_mtime": datetime.fromtimestamp(csv_path.stat().st_mtime, UTC).isoformat(),
                 "total_mappings": len(df),
                 "unique_keys": int(df["key"].nunique()),
-                "sectors_covered": int(df["sector"].nunique()),
+                "sectors_covered": int(df["source"].nunique()),
                 "by_division_name": {str(k): int(v) for k, v in by_division.items()},
                 "by_section_code": {str(k): int(v) for k, v in by_section.items()},
             }

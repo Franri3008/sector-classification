@@ -184,6 +184,9 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
                             "similarity": float(row["similarity"])
                             if pd.notna(row["similarity"])
                             else None,
+                            "confidence": float(row["confidence"])
+                            if "confidence" in row.index and pd.notna(row["confidence"])
+                            else None,
                         }
                     )
     cls_step.data = {
@@ -203,11 +206,8 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
         cls_step.note = "no cached classification for this tag"
     trace.steps.append(cls_step)
     out_step = TraceStep(name="output_rows")
-    output_rows: list[dict[str, str]] = []
+    output_rows: list[dict] = []
     try:
-        adapter = get_adapter(source)
-        tags_df = adapter.extract_tags(adapter.load_records())
-        keys = tags_df.loc[tags_df["tag_id"] == tag_id, "key"].unique()
         code_to_name = dict(
             zip(
                 load_sectors()["division_code"],
@@ -215,14 +215,19 @@ def build_trace(source: str, tag: str | None = None, *, seed: int | None = None)
                 strict=True,
             )
         )
-        for key in keys:
-            for p in picks:
-                name = code_to_name.get(str(p["division_code"]))
-                if not name:
-                    continue
-                output_rows.append({"sector": name, "key": str(key)})
-        output_rows = [dict(t) for t in {tuple(sorted(r.items())) for r in output_rows}]
-        output_rows.sort(key=lambda r: (r["key"], r["sector"]))
+        seen = set()
+        for p in picks:
+            name = code_to_name.get(str(p["division_code"]))
+            if not name:
+                continue
+            dedup_key = (name, tag_name)
+            if dedup_key in seen:
+                continue
+            seen.add(dedup_key)
+            output_rows.append(
+                {"source": name, "key": tag_name, "score": p.get("confidence")}
+            )
+        output_rows.sort(key=lambda r: (r["key"], r["source"]))
     except Exception as e:
         out_step.note = f"could not reconstruct output rows: {e}"
     out_step.data = {"count": len(output_rows), "rows": output_rows}
@@ -314,13 +319,19 @@ def format_trace(trace: TagTrace, *, ranking_limit: int = 20) -> str:
             if not d["picks"]:
                 out.append("    (empty)")
             for p in d["picks"]:
-                sim = f" (sim={p['similarity']:.3f})" if p.get("similarity") is not None else ""
-                out.append(f"    {p['division_code']}{sim}  {p['reason']}")
+                parts = []
+                if p.get("confidence") is not None:
+                    parts.append(f"conf={p['confidence']:.2f}")
+                if p.get("similarity") is not None:
+                    parts.append(f"sim={p['similarity']:.3f}")
+                suffix = f" ({', '.join(parts)})" if parts else ""
+                out.append(f"    {p['division_code']}{suffix}  {p['reason']}")
         elif step.name == "output_rows":
             d = step.data
-            out.append(f"  {d['count']} (sector, key) row(s) contributed to the final CSV")
+            out.append(f"  {d['count']} (source, key, score) row(s) contributed to the final CSV")
             for r in d["rows"][:30]:
-                out.append(f"    {r['sector']}, {r['key']}")
+                score = f"{r['score']:.2f}" if r.get("score") is not None else "—"
+                out.append(f"    {r['source']}, {r['key']}, {score}")
             if d["count"] > 30:
                 out.append(f"    ... and {d['count'] - 30} more")
         out.append("")

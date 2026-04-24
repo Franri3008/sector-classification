@@ -772,47 +772,42 @@
         const body = `<div class="trace-picks-empty">LLM returned no picks. This is the correct behavior for gibberish, placeholder IDs, or tags that fall outside NACE's scope.</div>`;
         return stepShell(5, "Classification", body);
       }
-      const body = `<div class="trace-picks">` + picks.map(p => `
+      const body = `<div class="trace-picks">` + picks.map(p => {
+        const conf = p.confidence != null ? p.confidence.toFixed(2) : "—";
+        const sim = p.similarity != null ? p.similarity.toFixed(3) : "—";
+        return `
         <div class="trace-pick">
           <div class="trace-pick-header">
             <span class="trace-pick-name">${escapeHtml(p.division_name || sectorName[p.code] || "?")} <span class="trace-pick-code">[${escapeHtml(p.code)}]</span></span>
-            <span class="trace-pick-sim">${p.similarity != null ? p.similarity.toFixed(3) : "—"}</span>
+            <span class="trace-pick-sim">conf ${conf} · sim ${sim}</span>
           </div>
           <div class="trace-pick-reason">${escapeHtml(p.reason || "(no reason)")}</div>
-        </div>`).join("") + `</div>`;
-      const note = "What the LLM chose from the shortlist, with its one-sentence reason for each.";
+        </div>`;
+      }).join("") + `</div>`;
+      const note = "The LLM's single best pick, with confidence score (0-1) and one-sentence reason.";
       return stepShell(5, "Classification", body, note);
     }
 
     function renderStep6OutputRows(tag, sectorName, source) {
-      const keys = tag.keys || [];
       const picks = tag.picks || [];
-      if (!picks.length || !keys.length) {
-        const body = `<div class="trace-meta-row" style="color:#94a3b8;font-style:italic">No output rows.${!picks.length ? " No picks." : ""}${!keys.length ? " No keys available locally." : ""}</div>`;
+      if (!picks.length) {
+        const body = `<div class="trace-meta-row" style="color:#94a3b8;font-style:italic">No output rows. LLM returned no pick for this tag.</div>`;
         return stepShell(6, `Output rows → data/outputs/${source}__*.csv`, body);
       }
-      // Cartesian product picks × keys, deduped on (sector, key)
-      const seen = new Set();
-      const rows = [];
-      picks.forEach(p => {
-        keys.forEach(k => {
-          const sectorLabel = p.division_name || sectorName[p.code] || p.code;
-          const key = `${sectorLabel}\t${k}`;
-          if (seen.has(key)) return;
-          seen.add(key);
-          rows.push({ sector: sectorLabel, key: k });
-        });
-      });
-      const shown = rows.slice(0, 30);
-      const more = rows.length > shown.length ? `<tr><td colspan="2" style="color:#94a3b8;font-style:italic">… ${rows.length - shown.length} more</td></tr>` : "";
+      // One output row per pick. With the single-best policy this is always 0 or 1.
+      const rows = picks.map(p => ({
+        source: p.division_name || sectorName[p.code] || p.code,
+        key: tag.tag_name,
+        score: p.confidence != null ? p.confidence.toFixed(2) : "—",
+      }));
       const body = `
         <table class="trace-output-table">
+          <thead><tr><td style="color:#94a3b8;font-weight:600">source</td><td style="color:#94a3b8;font-weight:600">key</td><td style="color:#94a3b8;font-weight:600">score</td></tr></thead>
           <tbody>
-            ${shown.map(r => `<tr><td>${escapeHtml(r.sector)}</td><td>${escapeHtml(r.key)}</td></tr>`).join("")}
-            ${more}
+            ${rows.map(r => `<tr><td>${escapeHtml(r.source)}</td><td>${escapeHtml(r.key)}</td><td>${escapeHtml(r.score)}</td></tr>`).join("")}
           </tbody>
         </table>`;
-      const note = `${rows.length} final (sector, key) row${rows.length === 1 ? "" : "s"} contributed by this tag.`;
+      const note = `${rows.length} final (source, key, score) row${rows.length === 1 ? "" : "s"} contributed by this tag.`;
       return stepShell(6, `Output rows → data/outputs/${source}__*.csv`, body, note);
     }
 

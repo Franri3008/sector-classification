@@ -17,7 +17,10 @@ logger = get_logger(__name__)
 
 def _cache_path(source: str) -> Path:
     ranking = settings.ranking
-    stem = f"{settings.llm.backend}__{_model_id()}__{sectors_hash()}__topN{ranking.top_n}_floor{ranking.min_similarity}"
+    stem = (
+        f"{settings.llm.backend}__{_model_id()}__{sectors_hash()}"
+        f"__topN{ranking.top_n}_floor{ranking.min_similarity}__single"
+    )
     return settings.paths.processed_dir / source / "classifications" / f"{stem}.parquet"
 
 
@@ -33,6 +36,7 @@ def _rows_for_empty(tag_id: str) -> list[dict]:
             "tag_id": tag_id,
             "division_code": None,
             "reason": None,
+            "confidence": None,
             "similarity": None,
             "raw_json": "{}",
         }
@@ -48,19 +52,22 @@ def _rows_from_result(tag_id: str, result, cands: list[dict]) -> list[dict]:
                 "tag_id": tag_id,
                 "division_code": None,
                 "reason": None,
+                "confidence": None,
                 "similarity": None,
                 "raw_json": raw,
             }
         ]
+    # Single-pick policy: defensively take the first if the LLM gave more than one.
+    pick = result.picks[0]
     return [
         {
             "tag_id": tag_id,
             "division_code": pick.division_code,
             "reason": pick.reason,
+            "confidence": float(pick.confidence) if pick.confidence is not None else None,
             "similarity": sim_by_code.get(pick.division_code),
             "raw_json": raw,
         }
-        for pick in result.picks
     ]
 
 
@@ -77,8 +84,12 @@ def classify_tags(
     cached = (
         read_parquet(cache_path)
         if cache_path.exists() and (not force)
-        else pd.DataFrame(columns=["tag_id", "division_code", "reason", "similarity", "raw_json"])
+        else pd.DataFrame(
+            columns=["tag_id", "division_code", "reason", "confidence", "similarity", "raw_json"]
+        )
     )
+    if "confidence" not in cached.columns:
+        cached["confidence"] = None
     cached_ids = set(cached["tag_id"].unique())
 
     new_rows: list[dict] = []

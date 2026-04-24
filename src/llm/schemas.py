@@ -5,12 +5,24 @@ from pydantic import BaseModel, Field
 
 class SectorPick(BaseModel):
     division_code: str = Field(description="Two-digit NACE division code (e.g. '01', '62').")
-    reason: str = Field(description="One-sentence justification.")
+    reason: str = Field(description="One-sentence justification for this pick.")
+    confidence: float = Field(
+        description=(
+            "Confidence in this pick, from 0.0 (uncertain / weak fit) to 1.0 "
+            "(canonical, unambiguous fit). Below ~0.5 means the pick is probably "
+            "not good enough — prefer an empty picks list instead."
+        )
+    )
 
 
 class ClassificationResult(BaseModel):
     tag_name: str
-    picks: list[SectorPick]
+    picks: list[SectorPick] = Field(
+        description=(
+            "Exactly zero or one element. Empty when no candidate is a genuinely "
+            "good fit. Never more than one."
+        )
+    )
 
 
 class DescriptionResult(BaseModel):

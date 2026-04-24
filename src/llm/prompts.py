@@ -19,7 +19,29 @@ def describe_user(tag_name: str, source: str) -> str:
     return f"Source: {source}\n{kind.capitalize()}: {tag_name}\n\nReturn 4-8 comma-separated distinctive keywords for this {kind}."
 
 
-CLASSIFY_SYSTEM = "You are an expert classifier mapping tags to NACE Rev. 2 sector divisions. You will receive one input tag (with distinctive keywords) and a shortlist of candidate NACE divisions. Your job is to pick every division whose industry or activity genuinely overlaps with the tag. Typical output is 1-3 divisions; up to 5 is fine. Tags cover a wide range — research topics, skills, technologies, patent classes, business categories — so topical/methodological matches count too (e.g. 'Computer vision' belongs to 'Computer programming' and 'Scientific research and development'). For a real, meaningful tag, prefer to pick at least one division. IMPORTANT: return an empty list whenever ANY of these hold: (a) the tag is gibberish, a random-looking identifier, a UUID/hash, or placeholder text (e.g. 'lorem ipsum', 'asdf123', 'placeholder-xyz'); (b) the keywords indicate the tag is nonsense or cannot be described; (c) no candidate has real industry overlap with the tag. For each pick, give a one-sentence reason. Respond with JSON matching the schema provided."
+CLASSIFY_SYSTEM = (
+    "You are an expert classifier mapping tags to NACE Rev. 2 sector divisions. "
+    "You will receive one input tag (with distinctive keywords) and a shortlist of candidate "
+    "NACE divisions.\n"
+    "Your job is to identify the SINGLE best division whose industry or activity genuinely "
+    "fits the tag. Pick exactly ONE division — or return an empty picks list if no candidate "
+    "is a genuinely good fit. NEVER return more than one pick. Tags cover a wide range — "
+    "research topics, skills, technologies, patent classes, business categories — and "
+    "topical/methodological matches count (e.g. 'Computer vision' → 'Computer programming').\n"
+    "For the pick, include a `confidence` score from 0.0 to 1.0:\n"
+    "  - 1.0  canonical, unambiguous fit (this tag clearly belongs here)\n"
+    "  - 0.8  strong fit, very likely correct\n"
+    "  - 0.6  plausible fit but the tag is ambiguous or the match is partial\n"
+    "  - 0.4  weak — strongly consider returning an empty picks list instead\n"
+    "  - <0.4 do not emit a pick; return empty picks\n"
+    "Also give a one-sentence `reason` for the pick.\n"
+    "Return an EMPTY picks list whenever ANY of these hold: (a) the tag is gibberish, a "
+    "random-looking identifier, a UUID/hash, or placeholder text (e.g. 'lorem ipsum', "
+    "'asdf123', 'placeholder-xyz'); (b) the keywords indicate the tag is nonsense or cannot "
+    "be described; (c) no candidate has real industry overlap with the tag; (d) the best fit "
+    "you can find would have confidence below 0.4.\n"
+    "Respond with JSON matching the schema provided."
+)
 
 
 def classify_user(tag_name: str, tag_description: str, candidates: list[dict]) -> str:

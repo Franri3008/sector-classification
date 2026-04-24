@@ -28,6 +28,39 @@ sector-classify run-all
 sector-classify run openalex
 ```
 
+## Running vLLM (for `LLM__BACKEND=vllm`)
+
+`setup.sh` installs vLLM + dependencies but **does not** start the server. Launch it yourself, preferably in its own `tmux` window so you can read the logs and kill it cleanly:
+
+```bash
+tmux new -s vllm
+source .venv/bin/activate
+VLLM_USE_DEEP_GEMM=0 vllm serve google/gemma-4-E2B-it \
+  --port 8001 \
+  --served-model-name gemma4 \
+  --gpu-memory-utilization 0.85 \
+  --max-num-seqs 32 \
+  --max-model-len 8192 \
+  --enable-prefix-caching \
+  --quantization fp8
+# detach: Ctrl-b d    · re-attach: tmux attach -t vllm    · kill: tmux kill-session -t vllm
+```
+
+Sanity-check from another shell once it's up:
+
+```bash
+curl -s http://localhost:8001/v1/models | jq .
+```
+
+Your `.env` should have:
+
+```
+LLM__BACKEND=vllm
+LLM__VLLM_BASE_URL=http://localhost:8001/v1
+LLM__VLLM_MODEL=gemma4
+LLM__MAX_CONCURRENCY=32      # push higher on A100; the sync loop will saturate the GPU
+```
+
 ## Pipeline
 
 ```

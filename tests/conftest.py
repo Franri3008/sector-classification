@@ -55,11 +55,15 @@ class FakeLLM(LLMClient):
         self, tag_name: str, tag_description: str, candidates: list[dict]
     ) -> ClassificationResult:
         self.classify_calls += 1
-        picks = [
-            SectorPick(division_code=c["division_code"], reason=f"matches {tag_name}")
-            for c in candidates[:2]
-        ]
-        return ClassificationResult(tag_name=tag_name, picks=picks)
+        if not candidates:
+            return ClassificationResult(tag_name=tag_name, picks=[])
+        top = candidates[0]
+        pick = SectorPick(
+            division_code=top["division_code"],
+            reason=f"matches {tag_name}",
+            confidence=0.85,
+        )
+        return ClassificationResult(tag_name=tag_name, picks=[pick])
 
     def enrich_sectors(
         self, section_code: str, section_name: str, divisions: list[dict]
