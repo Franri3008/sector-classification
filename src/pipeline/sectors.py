@@ -36,8 +36,37 @@ def _enrichment_cache_path(llm_model: str) -> Path:
     return base / f"{stem}.parquet"
 
 
+# Embedding models do not process negation logically: a phrase like
+# "non-pharmacy" embeds *toward* "pharmacy", and "Excludes: oil spill"
+# still encodes oil-spill semantics. The only reliable way to "exclude"
+# a concept is to never put it in the embed text. Sanitise every keyword
+# that flows into Covers/Specifically clauses by dropping negation-
+# prefixed or excluder terms — they belong only in steering prompts to
+# the LLM, never in the corpus we embed.
+_NEGATION_PREFIXES = (
+    "not ", "non-", "non ", "no ", "without ", "except ", "excluding ",
+    "minus ", "anti-", "anti ",
+)
+_EXCLUDER_SUBSTRINGS = ("exclude", "excluding", "exception", "negation")
+
+
+def _is_positive_keyword(kw: str) -> bool:
+    s = kw.strip().lower()
+    if not s:
+        return False
+    if any(s.startswith(p) for p in _NEGATION_PREFIXES):
+        return False
+    if any(sub in s for sub in _EXCLUDER_SUBSTRINGS):
+        return False
+    return True
+
+
+def _sanitise_positive(keywords: list[str]) -> list[str]:
+    return [k.strip() for k in keywords if k and _is_positive_keyword(k)]
+
+
 def _join_keywords(keywords: list[str]) -> str:
-    return ", ".join(k.strip() for k in keywords if k and k.strip())
+    return ", ".join(_sanitise_positive(keywords))
 
 
 def enrich_sectors(llm: LLMClient, force: bool = False) -> pd.DataFrame:
@@ -128,10 +157,17 @@ def _apply_override_to_field(current: str, add: list[str], drop: list[str]) -> s
         kws = [k for k in kws if k.lower() not in drop_lc]
     seen = {k.lower() for k in kws}
     for w in add or []:
+        if not _is_positive_keyword(w):
+            logger.warning(
+                "skipping non-positive keyword %r — embeddings do not honour negation; "
+                "use broad_drop / distinctive_drop instead",
+                w,
+            )
+            continue
         if w.lower() not in seen:
             kws.append(w)
             seen.add(w.lower())
-    return ", ".join(kws)
+    return ", ".join(_sanitise_positive(kws))
 
 
 def _apply_keyword_overrides(sectors: pd.DataFrame) -> pd.DataFrame:

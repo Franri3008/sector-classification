@@ -1,5 +1,6 @@
 {
   "_doc": "Hand-curated keyword overrides applied on top of the LLM-generated sector enrichment cache. Each entry may add or drop terms from a division's broad_keywords or distinctive_keywords lists. Used to correct documented misclassifications without re-running expensive LLM enrichment. See data/judge_classifications.csv for the regressions these overrides resolve.",
+  "_principle": "Use ONLY positive phrasing in `*_add` lists. Embedding models do not honour negation: 'non-pharmacy' embeds toward 'pharmacy', and 'Excludes: X' still pulls vectors toward X. To remove a concept, list it in `*_drop` — never write 'not X', 'non-X', 'except X', or 'excluding X' as an add term. The pipeline sanitises non-positive entries and warns, but the principle is the right level to follow.",
 
   "01": {
     "broad_add": ["hunting", "game", "wildlife", "trapping", "venison", "deer farming"],

@@ -99,3 +99,42 @@ def test_keyword_overrides_apply_to_embed_text(tmp_path, monkeypatch):
     # untouched division left alone
     row62 = out[out["division_code"] == "62"].iloc[0]
     assert row62["broad_keywords"] == "code, programming"
+
+
+def test_join_keywords_strips_negation_phrases():
+    """Embed text must contain only positive descriptors — embedding
+    models do not process negation logically."""
+    out = sectors_mod._join_keywords([
+        "hunting", "game",
+        "non-pharmacy", "not waste collection", "no fishing",
+        "excluding software", "without animals",
+        "anti-pollution",
+    ])
+    assert "hunting" in out
+    assert "game" in out
+    for forbidden in (
+        "non-pharmacy", "not waste collection", "no fishing",
+        "excluding software", "without animals", "anti-pollution",
+    ):
+        assert forbidden not in out
+
+
+def test_override_add_warns_and_drops_negation(tmp_path, monkeypatch, caplog):
+    overrides_path = tmp_path / "sector_keyword_overrides.json"
+    overrides_path.write_text(
+        '{"01": {"broad_add": ["hunting", "non-pharmacy", "not fishing"]}}'
+    )
+    monkeypatch.setattr(sectors_mod, "_OVERRIDES_PATH", overrides_path)
+    sectors = pd.DataFrame(
+        [{"division_code": "01", "division_name": "Agri",
+          "section_code": "A", "section_name": "AGRI",
+          "broad_keywords": "crops", "distinctive_keywords": ""}]
+    )
+    import logging
+    with caplog.at_level(logging.WARNING, logger="src.pipeline.sectors"):
+        out = sectors_mod._apply_keyword_overrides(sectors)
+    row = out.iloc[0]
+    assert "hunting" in row["broad_keywords"]
+    assert "non-pharmacy" not in row["broad_keywords"]
+    assert "not fishing" not in row["broad_keywords"]
+    assert any("non-positive keyword" in rec.message for rec in caplog.records)
