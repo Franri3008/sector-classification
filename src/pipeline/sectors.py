@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -17,9 +16,6 @@ from src.utils.batching import throttled_map
 from src.utils.hashing import file_hash, stable_hash
 
 logger = get_logger(__name__)
-
-
-_OVERRIDES_PATH = settings.paths.data_dir / "sector_keyword_overrides.json"
 
 
 def sectors_hash() -> str:
@@ -143,57 +139,6 @@ def _build_embed_text(row: pd.Series) -> str:
     return " ".join(parts)
 
 
-def _load_keyword_overrides() -> dict[str, dict]:
-    if not _OVERRIDES_PATH.exists():
-        return {}
-    raw = json.loads(_OVERRIDES_PATH.read_text())
-    return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, dict)}
-
-
-def _apply_override_to_field(current: str, add: list[str], drop: list[str]) -> str:
-    kws = [k.strip() for k in str(current or "").split(",") if k.strip()]
-    if drop:
-        drop_lc = {w.lower() for w in drop}
-        kws = [k for k in kws if k.lower() not in drop_lc]
-    seen = {k.lower() for k in kws}
-    for w in add or []:
-        if not _is_positive_keyword(w):
-            logger.warning(
-                "skipping non-positive keyword %r — embeddings do not honour negation; "
-                "use broad_drop / distinctive_drop instead",
-                w,
-            )
-            continue
-        if w.lower() not in seen:
-            kws.append(w)
-            seen.add(w.lower())
-    return ", ".join(_sanitise_positive(kws))
-
-
-def _apply_keyword_overrides(sectors: pd.DataFrame) -> pd.DataFrame:
-    overrides = _load_keyword_overrides()
-    if not overrides:
-        return sectors
-    sectors = sectors.copy()
-    for code, ovr in overrides.items():
-        mask = sectors["division_code"] == code
-        if not mask.any():
-            logger.warning("keyword override targets unknown division %s", code)
-            continue
-        for field in ("broad", "distinctive"):
-            col = f"{field}_keywords"
-            if col not in sectors.columns:
-                continue
-            new_val = _apply_override_to_field(
-                sectors.loc[mask, col].iloc[0],
-                ovr.get(f"{field}_add", []),
-                ovr.get(f"{field}_drop", []),
-            )
-            sectors.loc[mask, col] = new_val
-        logger.info("applied keyword override for division %s", code)
-    return sectors
-
-
 def sectors_with_embed_text(enriched: pd.DataFrame | None = None) -> pd.DataFrame:
     sectors = load_sectors()
     if enriched is not None and not enriched.empty:
@@ -202,7 +147,6 @@ def sectors_with_embed_text(enriched: pd.DataFrame | None = None) -> pd.DataFram
     else:
         sectors["broad_keywords"] = ""
         sectors["distinctive_keywords"] = ""
-    sectors = _apply_keyword_overrides(sectors)
     sectors["text"] = sectors.apply(_build_embed_text, axis=1)
     return sectors
 
