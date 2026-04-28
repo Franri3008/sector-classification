@@ -1,0 +1,8 @@
+{
+  "_doc": "Hand-curated keyword overrides applied on top of the LLM-generated sector enrichment cache. Each entry may add or drop terms from a division's broad_keywords or distinctive_keywords lists. Used to correct documented misclassifications without re-running expensive LLM enrichment. See data/judge_classifications.csv for the regressions these overrides resolve.",
+
+  "01": {
+    "broad_add": ["hunting", "game", "wildlife", "trapping", "venison", "deer farming"],
+    "rationale": "Division 01 includes 'hunting and related service activities' in its NACE name, but LLM enrichment under-weights the hunting sub-domain. Without these terms in the embed text the 'Hunting' Crunchbase tag lands on 03 (Fishing) by cosine drift inside section A. Fixes regression: data/judge_classifications.csv -> Hunting."
+  }
+}

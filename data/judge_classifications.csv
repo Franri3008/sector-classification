@@ -1,0 +1,2 @@
+source,tag,correct_division_code,rationale,added_at
+crunchbase,Hunting,01,"NACE 01 (Crop and animal production, hunting and related service activities) explicitly covers hunting in its name. Classifier was routing 'Hunting' to 03 Fishing and aquaculture due to vocabulary drift inside section A — division 01's enriched keywords didn't lead with hunting/game terms, so the cosine shortlist surfaced 03 instead.",2026-04-28

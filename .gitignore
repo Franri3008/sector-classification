@@ -215,3 +215,6 @@ data/outputs/
 
 dashboard/data.json
 dashboard/traces/
+
+# Exploratory research work (kept locally, not part of the repo)
+research/

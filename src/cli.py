@@ -178,6 +178,35 @@ def trace_cmd(
         typer.echo(f"\nwrote full trace (ranking_limit=88) to {output}")
 
 
+@app.command("judge")
+def judge_cmd(
+    source: Source,
+    picks_csv: Path | None = typer.Option(  # noqa: B008
+        None, "--picks", help="Path to a picks CSV (default: latest in outputs/)."
+    ),
+) -> None:
+    """Audit the latest output for a source against the SSOT judge file."""
+    import pandas as pd
+
+    from src.pipeline.judge import audit, latest_output_for, summarise_audit
+
+    target = picks_csv or latest_output_for(source.value)
+    if target is None or not target.exists():
+        typer.echo(f"no output found for {source.value} (looked in {settings.paths.outputs_dir}).")
+        typer.echo("run `python -m src.cli run` first, or pass --picks <file>.")
+        raise typer.Exit(1)
+    picks = pd.read_csv(target)
+    result = audit(source.value, picks)
+    if result.empty:
+        typer.echo(f"judge file has no entries for {source.value}.")
+        return
+    typer.echo(f"audit against {target.name}\n")
+    typer.echo(result.to_string(index=False))
+    typer.echo("\n" + summarise_audit(result))
+    if (result["status"] == "miss").any():
+        raise typer.Exit(1)
+
+
 @app.command("cache-info")
 def cache_info_cmd() -> None:
     from src.pipeline.sectors import sectors_hash
