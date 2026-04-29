@@ -218,3 +218,8 @@ dashboard/traces/
 
 # Exploratory research work (kept locally, not part of the repo)
 research/
+
+# Local-only iteration notes and partner deliverable bundle
+REPORT_2.md
+deliverables.zip
+deliverables_pkg/
