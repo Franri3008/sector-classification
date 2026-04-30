@@ -1,0 +1,993 @@
+source,tag,division_code,division_name,section_code,section_name,cos,rank
+crunchbase,3D Printing,18,Printing and reproduction of recorded media,C,MANUFACTURING,0.40250030159950256,1
+crunchbase,3D Printing,18,Printing and reproduction of recorded media,C,MANUFACTURING,0.40250030159950256,2
+crunchbase,3D Printing,32,Other manufacturing,C,MANUFACTURING,0.4014044404029846,3
+crunchbase,3D Technology,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.43149396777153015,1
+crunchbase,3D Technology,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.42087996006011963,2
+crunchbase,A/B Testing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3846015930175781,1
+crunchbase,Accounting,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6116914749145508,1
+crunchbase,Ad Exchange,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.34861353039741516,1
+crunchbase,Ad Network,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.387809693813324,1
+crunchbase,Ad Network,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.387809693813324,2
+crunchbase,Ad Retargeting,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.44199034571647644,1
+crunchbase,Ad Server,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38328295946121216,1
+crunchbase,Ad Server,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38328295946121216,2
+crunchbase,Ad Server,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.3760448694229126,3
+crunchbase,Ad Targeting,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5015876889228821,1
+crunchbase,Addiction Treatment,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3644792437553406,1
+crunchbase,Adult,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.35702675580978394,1
+crunchbase,Adult,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.3800095319747925,2
+crunchbase,Adult,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.35702675580978394,3
+crunchbase,Advanced Materials,25,"Manufacture of fabricated metal products, except machinery and equipment",C,MANUFACTURING,0.3769693672657013,1
+crunchbase,Advanced Materials,22,Manufacture of rubber and plastic products,C,MANUFACTURING,0.38919031620025635,2
+crunchbase,Advanced Materials,25,"Manufacture of fabricated metal products, except machinery and equipment",C,MANUFACTURING,0.3769693672657013,3
+crunchbase,Adventure Travel,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5695290565490723,1
+crunchbase,Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5741983652114868,1
+crunchbase,Advertising Platforms,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.36665934324264526,1
+crunchbase,Advice,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5309723615646362,1
+crunchbase,Advocacy,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.47851330041885376,1
+crunchbase,Aerospace,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4619387686252594,1
+crunchbase,Aerospace,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4619387686252594,2
+crunchbase,Affiliate Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.467646062374115,1
+crunchbase,Agriculture,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.6017150282859802,1
+crunchbase,AgTech,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.5463508367538452,1
+crunchbase,Air Transportation,51,Air transport,H,TRANSPORTATION AND STORAGE,0.7215306162834167,1
+crunchbase,Alternative Medicine,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5224775671958923,1
+crunchbase,Alternative Protein,10,Manufacture of food products,C,MANUFACTURING,0.30894550681114197,1
+crunchbase,Alternative Protein,10,Manufacture of food products,C,MANUFACTURING,0.30894550681114197,2
+crunchbase,Alumni,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.4688277840614319,1
+crunchbase,American Football,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.39458540081977844,1
+crunchbase,Amusement Park and Arcade,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.46861588954925537,1
+crunchbase,Analytics,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4362797141075134,1
+crunchbase,Android,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41209179162979126,1
+crunchbase,Angel Investment,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.38701167702674866,1
+crunchbase,Animal Feed,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.5518940091133118,1
+crunchbase,Animation,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4494224786758423,1
+crunchbase,App Discovery,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32167261838912964,1
+crunchbase,App Discovery,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3139696419239044,2
+crunchbase,App Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4465932548046112,1
+crunchbase,Apparel,14,Manufacture of wearing apparel,C,MANUFACTURING,0.6134397387504578,1
+crunchbase,Application Performance Management,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3046121895313263,1
+crunchbase,Application Performance Management,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3046121895313263,2
+crunchbase,Application Performance Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.30075764656066895,3
+crunchbase,Application Specific Integrated Circuit (ASIC),26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.4958050847053528,1
+crunchbase,Apps,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4497373700141907,1
+crunchbase,Aquaculture,03,Fishing and aquaculture,A,"AGRICULTURE, FORESTRY AND FISHING",0.7120798826217651,1
+crunchbase,Architecture,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5004093647003174,1
+crunchbase,Archiving Service,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.43420860171318054,1
+crunchbase,Archiving Service,91,"Libraries, archives, museums and other cultural activities",S,"ARTS, SPORTS AND RECREATION",0.42866989970207214,2
+crunchbase,Art,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.49960458278656006,1
+crunchbase,Artificial Intelligence (AI),62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41995903849601746,1
+crunchbase,Asset Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4372582733631134,1
+crunchbase,Assisted Living,87,Residential care activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5824400186538696,1
+crunchbase,Assistive Technology,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3406214714050293,1
+crunchbase,Association,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.6162604689598083,1
+crunchbase,Auctions,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.3899497091770172,1
+crunchbase,Auctions,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.3899497091770172,2
+crunchbase,Audio,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5290606617927551,1
+crunchbase,Audio Recording and Production,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5212152600288391,1
+crunchbase,Audio/Visual Equipment,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4846811592578888,1
+crunchbase,Audiobooks,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5178273916244507,1
+crunchbase,Audiobooks,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5060594081878662,2
+crunchbase,Augmented Reality,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.35779836773872375,1
+crunchbase,Auto Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4685147702693939,1
+crunchbase,Automotive,29,"Manufacture of motor vehicles, trailers and semi-trailers",C,MANUFACTURING,0.5921456813812256,1
+crunchbase,Autonomous Vehicles,29,"Manufacture of motor vehicles, trailers and semi-trailers",C,MANUFACTURING,0.41693198680877686,1
+crunchbase,B2B,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4444847106933594,1
+crunchbase,B2C,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5384979248046875,1
+crunchbase,Baby,31,Manufacture of furniture,C,MANUFACTURING,0.3578120470046997,1
+crunchbase,Bakery,10,Manufacture of food products,C,MANUFACTURING,0.39947420358657837,1
+crunchbase,Banking,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.6035510301589966,1
+crunchbase,Baseball,15,Manufacture of leather and related products of other materials,C,MANUFACTURING,0.4022049605846405,1
+crunchbase,Baseball,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.39482104778289795,2
+crunchbase,Basketball,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.30388063192367554,1
+crunchbase,Battery,27,Manufacture of electrical equipment,C,MANUFACTURING,0.37790635228157043,1
+crunchbase,Battery,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.37514442205429077,2
+crunchbase,Beauty,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.395027220249176,1
+crunchbase,Beauty,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.39219430088996887,2
+crunchbase,Big Data,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4275951087474823,1
+crunchbase,Billing,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.35426580905914307,1
+crunchbase,Billing,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3831511437892914,2
+crunchbase,Billing,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.35426580905914307,3
+crunchbase,Biofuel,19,Manufacture of coke and refined petroleum products,C,MANUFACTURING,0.3820022940635681,1
+crunchbase,Bioinformatics,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3585721254348755,1
+crunchbase,Biomass Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4336703419685364,1
+crunchbase,Biometrics,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32902130484580994,1
+crunchbase,Biometrics,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32902130484580994,2
+crunchbase,Biopharma,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.5260205268859863,1
+crunchbase,Biotechnology,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.4297211170196533,1
+crunchbase,Biotechnology,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.4297211170196533,2
+crunchbase,Bitcoin,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.36629483103752136,1
+crunchbase,Blockchain,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3877228796482086,1
+crunchbase,Blogging Platforms,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41576820611953735,1
+crunchbase,Blogging Platforms,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.40638503432273865,2
+crunchbase,Blogging Platforms,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.40582984685897827,3
+crunchbase,Boating,50,Water transport,H,TRANSPORTATION AND STORAGE,0.5660482048988342,1
+crunchbase,Bookkeeping and Payroll,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.49194788932800293,1
+crunchbase,Books,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5803288221359253,1
+crunchbase,Brand Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5827047228813171,1
+crunchbase,Brewing,11,Manufacture of beverages,C,MANUFACTURING,0.546992301940918,1
+crunchbase,Broadcasting,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6823652386665344,1
+crunchbase,Browser Extensions,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32470017671585083,1
+crunchbase,Building Maintenance,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5612576603889465,1
+crunchbase,Building Material,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.5789291858673096,1
+crunchbase,Business Development,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.42960524559020996,1
+crunchbase,Business Information Systems,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5854542851448059,1
+crunchbase,Business Intelligence,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3782328963279724,1
+crunchbase,Business Intelligence,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3782328963279724,2
+crunchbase,Business Process Automation (BPA),62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32997843623161316,1
+crunchbase,Business Process Automation (BPA),62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32997843623161316,2
+crunchbase,Business Travel,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5661029815673828,1
+crunchbase,CAD,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.46022120118141174,1
+crunchbase,Call Center,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.40614068508148193,1
+crunchbase,Cannabis,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.4557393789291382,1
+crunchbase,Car Sharing,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4114137291908264,1
+crunchbase,Carbon Capture,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.38812583684921265,1
+crunchbase,Card and Board Games,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.4094741940498352,1
+crunchbase,Career Planning,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.40824276208877563,1
+crunchbase,Casino,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.6201568245887756,1
+crunchbase,Casual Games,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.3756977617740631,1
+crunchbase,Catering,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.4940410852432251,1
+crunchbase,Cause Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5638800263404846,1
+crunchbase,Celebrity,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4741927981376648,1
+crunchbase,Charging Infrastructure,27,Manufacture of electrical equipment,C,MANUFACTURING,0.43828681111335754,1
+crunchbase,Charity,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.34358543157577515,1
+crunchbase,Charity,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.34358543157577515,2
+crunchbase,Charter Schools,85,Education,Q,EDUCATION,0.4014948010444641,1
+crunchbase,Chatbot,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36511772871017456,1
+crunchbase,Chemical,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.7359223961830139,1
+crunchbase,Chemical Engineering,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.49086907505989075,1
+crunchbase,Child Care,85,Education,Q,EDUCATION,0.41286373138427734,1
+crunchbase,Child Care,85,Education,Q,EDUCATION,0.41286373138427734,2
+crunchbase,Children,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.38162270188331604,1
+crunchbase,CivicTech,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.33345702290534973,1
+crunchbase,CivicTech,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34552890062332153,2
+crunchbase,CivicTech,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.33345702290534973,3
+crunchbase,Civil Engineering,42,Civil engineering,F,CONSTRUCTION,0.8187299966812134,1
+crunchbase,Classifieds,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4214629828929901,1
+crunchbase,Classifieds,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.41424864530563354,2
+crunchbase,Classifieds,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.40974947810173035,3
+crunchbase,Clean Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.46291065216064453,1
+crunchbase,Cleaning Products,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.49407005310058594,1
+crunchbase,CleanTech,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.425260454416275,1
+crunchbase,Clinical Trials,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.38755306601524353,1
+crunchbase,Cloud Computing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5947350263595581,1
+crunchbase,Cloud Data Services,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5453618168830872,1
+crunchbase,Cloud Infrastructure,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5859153270721436,1
+crunchbase,Cloud Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5419828295707703,1
+crunchbase,Cloud Security,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5623130798339844,1
+crunchbase,Cloud Storage,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5530673265457153,1
+crunchbase,CMS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34512192010879517,1
+crunchbase,CMS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34512192010879517,2
+crunchbase,Coffee,11,Manufacture of beverages,C,MANUFACTURING,0.4327271580696106,1
+crunchbase,Collaboration,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3480435907840729,1
+crunchbase,Collaborative Consumption,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4090098738670349,1
+crunchbase,Collectibles,91,"Libraries, archives, museums and other cultural activities",S,"ARTS, SPORTS AND RECREATION",0.3290899991989136,1
+crunchbase,Collection Agency,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4061921536922455,1
+crunchbase,College Recruiting,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3737547993659973,1
+crunchbase,Comics,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5891916751861572,1
+crunchbase,Commercial,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6451661586761475,1
+crunchbase,Commercial Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5141305923461914,1
+crunchbase,Commercial Lending,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5223333835601807,1
+crunchbase,Commercial Real Estate,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.5762829780578613,1
+crunchbase,Communication Hardware,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.46803081035614014,1
+crunchbase,Communications Infrastructure,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5502420663833618,1
+crunchbase,Communities,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.5371518731117249,1
+crunchbase,Compliance,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.39401981234550476,1
+crunchbase,Compliance,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.3993281126022339,2
+crunchbase,Compliance,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.39401981234550476,3
+crunchbase,Computer,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.5144290328025818,1
+crunchbase,Computer Vision,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.39213427901268005,1
+crunchbase,Concerts,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.41785892844200134,1
+crunchbase,Confectionery,10,Manufacture of food products,C,MANUFACTURING,0.4535600244998932,1
+crunchbase,Console Games,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.40580764412879944,1
+crunchbase,Construction,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.6231623888015747,1
+crunchbase,Construction,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.6231623888015747,2
+crunchbase,Consulting,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6022530198097229,1
+crunchbase,Consumer,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.4821075201034546,1
+crunchbase,Consumer Applications,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.386723130941391,1
+crunchbase,Consumer Applications,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3770493268966675,2
+crunchbase,Consumer Electronics,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.5090053677558899,1
+crunchbase,Consumer Goods,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.6278152465820312,1
+crunchbase,Consumer Lending,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.515568196773529,1
+crunchbase,Consumer Research,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5718227028846741,1
+crunchbase,Consumer Reviews,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4249066114425659,1
+crunchbase,Consumer Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4011058211326599,1
+crunchbase,Contact Management,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3468397259712219,1
+crunchbase,Content,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5240471363067627,1
+crunchbase,Content Creators,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5243402123451233,1
+crunchbase,Content Delivery Network,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4925888180732727,1
+crunchbase,Content Discovery,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.47658175230026245,1
+crunchbase,Content Marketing,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5421788096427917,1
+crunchbase,Content Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5284076929092407,2
+crunchbase,Content Syndication,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5113769173622131,1
+crunchbase,Contests,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3640890419483185,1
+crunchbase,Contests,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3640890419483185,2
+crunchbase,Continuing Education,85,Education,Q,EDUCATION,0.4247332513332367,1
+crunchbase,Cooking,10,Manufacture of food products,C,MANUFACTURING,0.4365178644657135,1
+crunchbase,Cooking,10,Manufacture of food products,C,MANUFACTURING,0.4365178644657135,2
+crunchbase,Copywriting,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5246742367744446,1
+crunchbase,Corporate Training,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.41024091839790344,1
+crunchbase,Corrections Facilities,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.36480963230133057,1
+crunchbase,Corrections Facilities,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.37255656719207764,2
+crunchbase,Cosmetic Surgery,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.38697388768196106,1
+crunchbase,Cosmetics,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.45599400997161865,1
+crunchbase,Cosmetics,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.45599400997161865,2
+crunchbase,Coupons,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.320378839969635,1
+crunchbase,Courier Service,53,Postal and courier activities,H,TRANSPORTATION AND STORAGE,0.6547587513923645,1
+crunchbase,Coworking,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.41864028573036194,1
+crunchbase,Craft Beer,11,Manufacture of beverages,C,MANUFACTURING,0.6508590579032898,1
+crunchbase,Creative Agency,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6526851654052734,1
+crunchbase,Credit,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.4519779086112976,1
+crunchbase,Credit Bureau,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.41547027230262756,1
+crunchbase,Credit Cards,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4584367871284485,1
+crunchbase,Cricket,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.34714430570602417,1
+crunchbase,CRM,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4135564863681793,1
+crunchbase,CRM,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4063599705696106,2
+crunchbase,Crowdfunding,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3232263922691345,1
+crunchbase,Crowdsourcing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5237482190132141,1
+crunchbase,Cryptocurrency,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4362201690673828,1
+crunchbase,Customer Service,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.426784873008728,1
+crunchbase,Cyber Security,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4215983748435974,1
+crunchbase,Cyber Security,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41462451219558716,2
+crunchbase,Cycling,14,Manufacture of wearing apparel,C,MANUFACTURING,0.40938377380371094,1
+crunchbase,Dairy,10,Manufacture of food products,C,MANUFACTURING,0.39931485056877136,1
+crunchbase,Darknet,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38558658957481384,1
+crunchbase,Data Center,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5615963935852051,1
+crunchbase,Data Center Automation,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.46726667881011963,1
+crunchbase,Data Collection and Labeling,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.38547199964523315,1
+crunchbase,Data Governance,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4344594478607178,1
+crunchbase,Data Integration,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4170879125595093,1
+crunchbase,Data Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.45258381962776184,1
+crunchbase,Data Mining,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4043540954589844,1
+crunchbase,Data Mining,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.401310533285141,2
+crunchbase,Data Mining,09,Mining support service activities,B,MINING AND QUARRYING,0.3977084457874298,3
+crunchbase,Data Storage,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5532029867172241,1
+crunchbase,Data Visualization,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4021707773208618,1
+crunchbase,Database,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5160105228424072,1
+crunchbase,Dating,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34547507762908936,1
+crunchbase,Debit Cards,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4371119737625122,1
+crunchbase,Debt Collections,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.43221449851989746,1
+crunchbase,Decentralized Finance (DeFi),64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3774815499782562,1
+crunchbase,Delivery,53,Postal and courier activities,H,TRANSPORTATION AND STORAGE,0.5938422083854675,1
+crunchbase,Delivery Service,53,Postal and courier activities,H,TRANSPORTATION AND STORAGE,0.5862028002738953,1
+crunchbase,Dental,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4201565682888031,1
+crunchbase,Desktop Apps,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3977867066860199,1
+crunchbase,Developer APIs,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.43065130710601807,1
+crunchbase,Developer Platform,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4353293776512146,1
+crunchbase,Developer Tools,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.47395846247673035,1
+crunchbase,DevOps,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.44289422035217285,1
+crunchbase,Diabetes,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.403433620929718,1
+crunchbase,Dietary Supplements,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.361607164144516,1
+crunchbase,Dietary Supplements,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.361607164144516,2
+crunchbase,Digital Entertainment,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5162718296051025,1
+crunchbase,Digital Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.604253888130188,1
+crunchbase,Digital Media,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5267130136489868,1
+crunchbase,Digital Signage,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4295594394207001,1
+crunchbase,Digital Signage,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4295594394207001,2
+crunchbase,Direct Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5558058023452759,1
+crunchbase,Direct Sales,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4335472583770752,1
+crunchbase,Direct Sales,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.42138803005218506,2
+crunchbase,Distillery,11,Manufacture of beverages,C,MANUFACTURING,0.625700831413269,1
+crunchbase,Diving,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5079622268676758,1
+crunchbase,DIY,95,"Repair and maintenance of computers, personal and household goods, and motor vehicles and motorcycles",T,OTHER SERVICE ACTIVITIES,0.5305869579315186,1
+crunchbase,Document Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4265647828578949,1
+crunchbase,Document Preparation,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.42090854048728943,1
+crunchbase,Domain Registrar,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.40230515599250793,1
+crunchbase,DRM,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4643619954586029,1
+crunchbase,Drone Management,51,Air transport,H,TRANSPORTATION AND STORAGE,0.4796680510044098,1
+crunchbase,Drones,51,Air transport,H,TRANSPORTATION AND STORAGE,0.4471718370914459,1
+crunchbase,DSP,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.4898541569709778,1
+crunchbase,E-Commerce,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5154932141304016,1
+crunchbase,E-Commerce Platforms,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36543312668800354,1
+crunchbase,E-Commerce Platforms,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36543312668800354,2
+crunchbase,E-Learning,85,Education,Q,EDUCATION,0.46810659766197205,1
+crunchbase,E-Signature,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.33546969294548035,1
+crunchbase,EBooks,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5242302417755127,1
+crunchbase,Ediscovery,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3673739433288574,1
+crunchbase,EdTech,85,Education,Q,EDUCATION,0.3921791911125183,1
+crunchbase,Education,85,Education,Q,EDUCATION,0.4899597764015198,1
+crunchbase,Edutainment,85,Education,Q,EDUCATION,0.3696899116039276,1
+crunchbase,Elder Care,87,Residential care activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5706955194473267,1
+crunchbase,Elderly,87,Residential care activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5513216257095337,1
+crunchbase,Electric Vehicle,27,Manufacture of electrical equipment,C,MANUFACTURING,0.4608631730079651,1
+crunchbase,Electrical Distribution,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4908432066440582,1
+crunchbase,Electronic Design Automation (EDA),26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.46376264095306396,1
+crunchbase,Electronic Health Record (EHR),86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42829886078834534,1
+crunchbase,Electronics,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.6688616275787354,1
+crunchbase,Email,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4341088533401489,1
+crunchbase,Email,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4341088533401489,2
+crunchbase,Email Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.527808666229248,1
+crunchbase,Embedded Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36807262897491455,1
+crunchbase,Embedded Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36807262897491455,2
+crunchbase,Embedded Systems,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.35992926359176636,1
+crunchbase,Embedded Systems,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.35992926359176636,2
+crunchbase,Embedded Systems,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.3589683175086975,3
+crunchbase,Emergency Medicine,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4220494031906128,1
+crunchbase,Emerging Markets,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.43739500641822815,1
+crunchbase,Employee Benefits,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3652042746543884,1
+crunchbase,Employment,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5018399953842163,1
+crunchbase,Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.5546559691429138,1
+crunchbase,Energy Efficiency,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.458403080701828,1
+crunchbase,Energy Management,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.43415820598602295,1
+crunchbase,Energy Storage,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4012525677680969,1
+crunchbase,Enterprise,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4183026850223541,1
+crunchbase,Enterprise,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.40942656993865967,2
+crunchbase,Enterprise Applications,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3610656261444092,1
+crunchbase,Enterprise Applications,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3610656261444092,2
+crunchbase,Enterprise Resource Planning (ERP),70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5232015252113342,1
+crunchbase,Enterprise Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3853382170200348,1
+crunchbase,Environmental Consulting,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.46857208013534546,1
+crunchbase,Environmental Consulting,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.46857208013534546,2
+crunchbase,Environmental Engineering,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.6314864754676819,1
+crunchbase,Equestrian,75,Veterinary activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4622679054737091,1
+crunchbase,eSports,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.4077283442020416,1
+crunchbase,eSports,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.4077283442020416,2
+crunchbase,Ethereum,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.35858094692230225,1
+crunchbase,Event Management,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3784405291080475,1
+crunchbase,Event Management,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.3737785816192627,2
+crunchbase,Event Promotion,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5609127879142761,1
+crunchbase,Events,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.45815327763557434,1
+crunchbase,Extermination Service,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.42566394805908203,1
+crunchbase,Eyewear,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42127445340156555,1
+crunchbase,Facebook,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.39350321888923645,1
+crunchbase,Facial Recognition,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3282797336578369,1
+crunchbase,Facilities Support Services,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5432354211807251,1
+crunchbase,Facility Management,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5126405358314514,1
+crunchbase,Family,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4903644323348999,1
+crunchbase,Fantasy Sports,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.4585604667663574,1
+crunchbase,Farmers Market,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.36024874448776245,1
+crunchbase,Farmers Market,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.36024874448776245,2
+crunchbase,Farming,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.6287838220596313,1
+crunchbase,Fashion,14,Manufacture of wearing apparel,C,MANUFACTURING,0.6227494478225708,1
+crunchbase,Fast-Moving Consumer Goods,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5042852163314819,1
+crunchbase,Ferry Service,50,Water transport,H,TRANSPORTATION AND STORAGE,0.6160569190979004,1
+crunchbase,Fertility,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42133060097694397,1
+crunchbase,Field Support,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41451212763786316,1
+crunchbase,Field Support,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4272499680519104,2
+crunchbase,Field Support,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41451212763786316,3
+crunchbase,Field Support,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41163182258605957,4
+crunchbase,Field Support,95,"Repair and maintenance of computers, personal and household goods, and motor vehicles and motorcycles",T,OTHER SERVICE ACTIVITIES,0.40221238136291504,5
+crunchbase,Field-Programmable Gate Array (FPGA),26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.43955397605895996,1
+crunchbase,File Sharing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4355330169200897,1
+crunchbase,Film,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6288779377937317,1
+crunchbase,Film Distribution,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4596984386444092,1
+crunchbase,Film Distribution,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4596984386444092,2
+crunchbase,Film Production,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5960564613342285,1
+crunchbase,Finance,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5972554087638855,1
+crunchbase,Financial Exchanges,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.47262316942214966,1
+crunchbase,Financial Services,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.6358751058578491,1
+crunchbase,FinTech,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5217446684837341,1
+crunchbase,First Aid,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3809417188167572,1
+crunchbase,Fitness,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.36672839522361755,1
+crunchbase,Fitness,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.36672839522361755,2
+crunchbase,Flash Sale,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.3474438190460205,1
+crunchbase,Flash Storage,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.38789206743240356,1
+crunchbase,Fleet Management,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5279649496078491,1
+crunchbase,Flowers,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.5131418704986572,1
+crunchbase,Food and Beverage,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.5691828727722168,1
+crunchbase,Food and Beverage,11,Manufacture of beverages,C,MANUFACTURING,0.5541340112686157,2
+crunchbase,Food Delivery,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.4824058711528778,1
+crunchbase,Food Processing,10,Manufacture of food products,C,MANUFACTURING,0.55914306640625,1
+crunchbase,Food Trucks,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.4378308355808258,1
+crunchbase,Foreign Exchange Trading,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.421569287776947,1
+crunchbase,Forestry,02,Forestry and logging,A,"AGRICULTURE, FORESTRY AND FISHING",0.7306095957756042,1
+crunchbase,Fossil Fuels,06,Extraction of crude petroleum and natural gas,B,MINING AND QUARRYING,0.6530669331550598,1
+crunchbase,Foundries,25,"Manufacture of fabricated metal products, except machinery and equipment",C,MANUFACTURING,0.47539976239204407,1
+crunchbase,Foundries,24,Manufacture of basic metals,C,MANUFACTURING,0.46855565905570984,2
+crunchbase,Franchise,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3485279679298401,1
+crunchbase,Fraud Detection,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.39752328395843506,1
+crunchbase,Fraud Detection,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.3866564929485321,2
+crunchbase,Freelance,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4361444115638733,1
+crunchbase,Freelance,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.42354708909988403,2
+crunchbase,Freemium,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3995605409145355,1
+crunchbase,Freight Service,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.6024650931358337,1
+crunchbase,Fruit,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.5118046998977661,1
+crunchbase,Fuel,06,Extraction of crude petroleum and natural gas,B,MINING AND QUARRYING,0.6521226167678833,1
+crunchbase,Fuel Cell,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.38171422481536865,1
+crunchbase,Funding Platform,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3277115821838379,1
+crunchbase,Funerals,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3700709939002991,1
+crunchbase,Furniture,31,Manufacture of furniture,C,MANUFACTURING,0.7571998238563538,1
+crunchbase,Gambling,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.7578559517860413,1
+crunchbase,Gamification,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.32873743772506714,1
+crunchbase,Gaming,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.5179765820503235,1
+crunchbase,Generation Y,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.43042486906051636,1
+crunchbase,Generation Z,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.416709840297699,1
+crunchbase,Generative AI,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.368592232465744,1
+crunchbase,Genetics,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4834722876548767,1
+crunchbase,Geospatial,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37785303592681885,1
+crunchbase,Geospatial,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37785303592681885,2
+crunchbase,Geothermal Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.42506143450737,1
+crunchbase,Gift,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4250396490097046,1
+crunchbase,Gift Card,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.3238247036933899,1
+crunchbase,Gift Exchange,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3867083787918091,1
+crunchbase,Gift Registry,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.30582523345947266,1
+crunchbase,Golf,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3783741295337677,1
+crunchbase,Golf,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3783741295337677,2
+crunchbase,Golf,14,Manufacture of wearing apparel,C,MANUFACTURING,0.36932194232940674,3
+crunchbase,Google,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.33975616097450256,1
+crunchbase,Google Glass,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.3799993693828583,1
+crunchbase,Government,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.5009884834289551,1
+crunchbase,GovTech,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.45806828141212463,1
+crunchbase,GovTech,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.45806828141212463,2
+crunchbase,GPS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34900611639022827,1
+crunchbase,GPS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34900611639022827,2
+crunchbase,GPS,51,Air transport,H,TRANSPORTATION AND STORAGE,0.34803852438926697,3
+crunchbase,GPS,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.3433834910392761,4
+crunchbase,GPU,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.3356664180755615,1
+crunchbase,GPU,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.3356664180755615,2
+crunchbase,Graphic Design,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5369293093681335,1
+crunchbase,Green Building,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.47538673877716064,1
+crunchbase,Green Consumer Goods,22,Manufacture of rubber and plastic products,C,MANUFACTURING,0.46332961320877075,1
+crunchbase,GreenTech,42,Civil engineering,F,CONSTRUCTION,0.3311815559864044,1
+crunchbase,GreenTech,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.32567906379699707,2
+crunchbase,GreenTech,27,Manufacture of electrical equipment,C,MANUFACTURING,0.32434242963790894,3
+crunchbase,GreenTech,38,"Waste collection, recovery and disposal activities",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.321603000164032,4
+crunchbase,Grocery,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5732065439224243,1
+crunchbase,Group Buying,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.3032313585281372,1
+crunchbase,Group Buying,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.3032313585281372,2
+crunchbase,Guides,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3105669915676117,1
+crunchbase,Handmade,16,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",C,MANUFACTURING,0.5042973756790161,1
+crunchbase,Hardware,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.6560874581336975,1
+crunchbase,Health Care,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.6289145350456238,1
+crunchbase,Health Diagnostics,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4856884777545929,1
+crunchbase,Health Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.46350768208503723,1
+crunchbase,Hedge Funds,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4292072355747223,1
+crunchbase,Herbs and Spices,10,Manufacture of food products,C,MANUFACTURING,0.3583851754665375,1
+crunchbase,Higher Education,85,Education,Q,EDUCATION,0.4458676874637604,1
+crunchbase,Hockey,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.34049904346466064,1
+crunchbase,Home and Garden,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.56717848777771,1
+crunchbase,Home Appliances,27,Manufacture of electrical equipment,C,MANUFACTURING,0.3204537630081177,1
+crunchbase,Home Appliances,95,"Repair and maintenance of computers, personal and household goods, and motor vehicles and motorcycles",T,OTHER SERVICE ACTIVITIES,0.3193795382976532,2
+crunchbase,Home Appliances,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.3150164484977722,3
+crunchbase,Home Decor,31,Manufacture of furniture,C,MANUFACTURING,0.4480913281440735,1
+crunchbase,Home Health Care,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5366659164428711,1
+crunchbase,Home Improvement,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4595111608505249,1
+crunchbase,Home Improvement,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.4547419250011444,2
+crunchbase,Home Renovation,41,Construction of residential and non-residential buildings,F,CONSTRUCTION,0.5342018604278564,1
+crunchbase,Home Services,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4766214191913605,1
+crunchbase,Home Services,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.47426915168762207,2
+crunchbase,Homeland Security,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.4502248466014862,1
+crunchbase,Homeless Shelter,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5158940553665161,1
+crunchbase,Horticulture,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.6089988350868225,1
+crunchbase,Hospital,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5467195510864258,1
+crunchbase,Hospitality,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.6484271883964539,1
+crunchbase,Hotel,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.7008801102638245,1
+crunchbase,Housekeeping Service,97,Activities of households as employers of domestic personnel,U,ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS AND UNDIFFERENTIATED GOODS - AND SERVICE-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE,0.5361776947975159,1
+crunchbase,Human Computer Interaction,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.46323925256729126,1
+crunchbase,Human Resources,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5702322125434875,1
+crunchbase,Humanitarian,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4283146262168884,1
+crunchbase,Hunting,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.38603901863098145,1
+crunchbase,Hunting,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.38603901863098145,2
+crunchbase,Hydroelectric,42,Civil engineering,F,CONSTRUCTION,0.4380446672439575,1
+crunchbase,Hydroelectric,36,"Water collection, treatment and supply",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.4294516444206238,2
+crunchbase,Hydroponics,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.5092579126358032,1
+crunchbase,IaaS,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5349552631378174,1
+crunchbase,Identity Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36306291818618774,1
+crunchbase,Identity Management,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.3528454601764679,2
+crunchbase,Image Recognition,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37306344509124756,1
+crunchbase,Impact Investing,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4044482409954071,1
+crunchbase,In-Flight Entertainment,51,Air transport,H,TRANSPORTATION AND STORAGE,0.5279393196105957,1
+crunchbase,Incubators,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3564467430114746,1
+crunchbase,Incubators,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3564467430114746,2
+crunchbase,Independent Music,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.39124664664268494,1
+crunchbase,Independent Music,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.38915562629699707,2
+crunchbase,Indoor Positioning,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.3412501811981201,1
+crunchbase,Industrial,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.6078997254371643,1
+crunchbase,Industrial Automation,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.48736390471458435,1
+crunchbase,Industrial Design,31,Manufacture of furniture,C,MANUFACTURING,0.44752001762390137,1
+crunchbase,Industrial Engineering,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.4638901352882385,1
+crunchbase,Industrial Manufacturing,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.6204222440719604,1
+crunchbase,Information and Communications Technology (ICT),63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5754683613777161,1
+crunchbase,Information Services,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5253470540046692,1
+crunchbase,Information Technology,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5792404413223267,1
+crunchbase,Infrastructure,42,Civil engineering,F,CONSTRUCTION,0.7106695771217346,1
+crunchbase,Innovation Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.44666704535484314,1
+crunchbase,Insurance,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.5814054012298584,1
+crunchbase,Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5778425335884094,2
+crunchbase,InsurTech,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.48557502031326294,1
+crunchbase,Intellectual Property,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.36203473806381226,1
+crunchbase,Intelligent Systems,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4175461232662201,1
+crunchbase,Interior Design,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.39940837025642395,1
+crunchbase,Interior Design,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.39940837025642395,2
+crunchbase,Interior Design,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.38869866728782654,3
+crunchbase,Internet,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5467245578765869,1
+crunchbase,Internet of Things,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3687117099761963,1
+crunchbase,Internet Radio,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5876519680023193,1
+crunchbase,Intrusion Detection,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3595616817474365,1
+crunchbase,iOS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4176023602485657,1
+crunchbase,ISP,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5130069851875305,1
+crunchbase,IT Infrastructure,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5671311020851135,1
+crunchbase,IT Management,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.492070734500885,1
+crunchbase,Janitorial Service,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4535108208656311,1
+crunchbase,Jewelry,25,"Manufacture of fabricated metal products, except machinery and equipment",C,MANUFACTURING,0.3792443573474884,1
+crunchbase,Journalism,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5457071661949158,1
+crunchbase,Knowledge Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.43770885467529297,1
+crunchbase,Landscaping,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5636324286460876,1
+crunchbase,Language Learning,85,Education,Q,EDUCATION,0.3378925919532776,1
+crunchbase,Laser,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.4564618170261383,1
+crunchbase,Last Mile Transportation,53,Postal and courier activities,H,TRANSPORTATION AND STORAGE,0.532560408115387,1
+crunchbase,Laundry and Dry-cleaning,14,Manufacture of wearing apparel,C,MANUFACTURING,0.43470901250839233,1
+crunchbase,Law Enforcement,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.5038704872131348,1
+crunchbase,Law Enforcement,80,Investigation and security activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4891858696937561,2
+crunchbase,Lead Generation,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4243786633014679,1
+crunchbase,Lead Management,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4452797770500183,1
+crunchbase,Leasing,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.6030749082565308,1
+crunchbase,Legal,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5240272879600525,1
+crunchbase,Legal Tech,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38204309344291687,1
+crunchbase,Legal Tech,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38204309344291687,2
+crunchbase,Leisure,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.525929868221283,1
+crunchbase,Lending,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5168560147285461,1
+crunchbase,LGBT,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.41734305024147034,1
+crunchbase,LGBT,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.41734305024147034,2
+crunchbase,Life Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.5192629098892212,1
+crunchbase,Life Science,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.4914913773536682,1
+crunchbase,Lifestyle,14,Manufacture of wearing apparel,C,MANUFACTURING,0.46839019656181335,1
+crunchbase,Lighting,27,Manufacture of electrical equipment,C,MANUFACTURING,0.4844180941581726,1
+crunchbase,Limousine Service,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3779029846191406,1
+crunchbase,Limousine Service,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3779029846191406,2
+crunchbase,Lingerie,14,Manufacture of wearing apparel,C,MANUFACTURING,0.48895177245140076,1
+crunchbase,Linux,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4371105432510376,1
+crunchbase,Linux,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4296676516532898,2
+crunchbase,Livestock,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.6089233160018921,1
+crunchbase,Local,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5232303142547607,1
+crunchbase,Local Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4857207238674164,1
+crunchbase,Local Business,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5152425169944763,1
+crunchbase,Local Shopping,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5143541097640991,1
+crunchbase,Location Based Services,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.341806560754776,1
+crunchbase,Location Based Services,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3367856740951538,2
+crunchbase,Location Based Services,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.333541601896286,3
+crunchbase,Logistics,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.6347564458847046,1
+crunchbase,Loyalty Programs,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.2888159155845642,1
+crunchbase,Loyalty Programs,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.2888159155845642,2
+crunchbase,Machine Learning,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3703055679798126,1
+crunchbase,Machinery Manufacturing,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.6310802698135376,1
+crunchbase,macOS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.33218979835510254,1
+crunchbase,Made to Order,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3444829285144806,1
+crunchbase,Made to Order,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3444829285144806,2
+crunchbase,Management Consulting,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6535587310791016,1
+crunchbase,Management Information Systems,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3598715364933014,1
+crunchbase,Management Information Systems,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.35073086619377136,2
+crunchbase,Manufacturing,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.5811367630958557,1
+crunchbase,Mapping Services,74,"Other professional, scientific and technical activities",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.38696834444999695,1
+crunchbase,Mapping Services,09,Mining support service activities,B,MINING AND QUARRYING,0.38323497772216797,2
+crunchbase,Marine Technology,03,Fishing and aquaculture,A,"AGRICULTURE, FORESTRY AND FISHING",0.4418172836303711,1
+crunchbase,Marine Technology,50,Water transport,H,TRANSPORTATION AND STORAGE,0.4326387047767639,2
+crunchbase,Marine Transportation,50,Water transport,H,TRANSPORTATION AND STORAGE,0.7068496346473694,1
+crunchbase,Market Research,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5853345394134521,1
+crunchbase,Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6169382929801941,1
+crunchbase,Marketing Automation,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.42601674795150757,1
+crunchbase,Marketplace,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.47181612253189087,1
+crunchbase,Meat and Poultry,10,Manufacture of food products,C,MANUFACTURING,0.46398982405662537,1
+crunchbase,Meat and Poultry,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.4635199010372162,2
+crunchbase,Mechanical Design,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.5469480752944946,1
+crunchbase,Mechanical Engineering,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.5868110060691833,1
+crunchbase,Media and Entertainment,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5232241153717041,1
+crunchbase,Medical,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5337530970573425,1
+crunchbase,Medical Device,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.533437192440033,1
+crunchbase,Meeting Software,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3143925070762634,1
+crunchbase,Meeting Software,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3143925070762634,2
+crunchbase,Meeting Software,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.30933135747909546,3
+crunchbase,Men's,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.40446603298187256,1
+crunchbase,Men's,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.40446603298187256,2
+crunchbase,Men's,15,Manufacture of leather and related products of other materials,C,MANUFACTURING,0.39334505796432495,3
+crunchbase,Mental Health,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5114746689796448,1
+crunchbase,Messaging,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.48503023386001587,1
+crunchbase,Metaverse,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.26612427830696106,1
+crunchbase,Metaverse,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2774035632610321,2
+crunchbase,Metaverse,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.26612427830696106,3
+crunchbase,mHealth,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.45642608404159546,1
+crunchbase,Micro Lending,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.42970266938209534,1
+crunchbase,Military,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.441562682390213,1
+crunchbase,Millennials,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4150470197200775,1
+crunchbase,Mineral,07,Mining of metal ores,B,MINING AND QUARRYING,0.6317297220230103,1
+crunchbase,Mining,09,Mining support service activities,B,MINING AND QUARRYING,0.598277747631073,1
+crunchbase,Mining Technology,07,Mining of metal ores,B,MINING AND QUARRYING,0.62103670835495,1
+crunchbase,MMO Games,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3592728078365326,1
+crunchbase,MMO Games,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.362808495759964,2
+crunchbase,MMO Games,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3592728078365326,3
+crunchbase,MMO Games,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.3520527482032776,4
+crunchbase,Mobile,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4747404456138611,1
+crunchbase,Mobile Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.46953028440475464,1
+crunchbase,Mobile Apps,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.42151981592178345,1
+crunchbase,Mobile Devices,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.5331769585609436,1
+crunchbase,Mobile Payments,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.38613900542259216,1
+crunchbase,MOOC,85,Education,Q,EDUCATION,0.2917509377002716,1
+crunchbase,Mortgage,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.3790501356124878,1
+crunchbase,Mortgage,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.3790501356124878,2
+crunchbase,Motion Capture,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.41253671050071716,1
+crunchbase,Motorsports,45,Trade and repair of motor vehicles and motorcycles,G,WHOLESALE AND RETAIL TRADE,0.444393515586853,1
+crunchbase,Multi-level Marketing,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.34803515672683716,1
+crunchbase,Multi-level Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.340141236782074,2
+crunchbase,Museums and Historical Sites,91,"Libraries, archives, museums and other cultural activities",S,"ARTS, SPORTS AND RECREATION",0.6826947331428528,1
+crunchbase,Music,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5776875615119934,1
+crunchbase,Music Education,85,Education,Q,EDUCATION,0.40768104791641235,1
+crunchbase,Music Label,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4822807013988495,1
+crunchbase,Music Label,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4703471064567566,2
+crunchbase,Music Streaming,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.45088183879852295,1
+crunchbase,Music Venues,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.44463875889778137,1
+crunchbase,Musical Instruments,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.4864039421081543,1
+crunchbase,Nanotechnology,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.5368051528930664,1
+crunchbase,National Security,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.5049765706062317,1
+crunchbase,Native Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5023912191390991,1
+crunchbase,Natural Language Processing,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32124292850494385,1
+crunchbase,Natural Language Processing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.31393128633499146,2
+crunchbase,Natural Resources,02,Forestry and logging,A,"AGRICULTURE, FORESTRY AND FISHING",0.6514975428581238,1
+crunchbase,Navigation,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4456760883331299,1
+crunchbase,Network Hardware,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4129070043563843,1
+crunchbase,Network Security,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37860721349716187,1
+crunchbase,Network Security,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37860721349716187,2
+crunchbase,Network Security,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.3692936897277832,3
+crunchbase,Neuroscience,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4829578697681427,1
+crunchbase,News,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6226902008056641,1
+crunchbase,NFC,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.30429530143737793,1
+crunchbase,NFC,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2990209460258484,2
+crunchbase,Nightclubs,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.4344882667064667,1
+crunchbase,Nightclubs,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.427920937538147,2
+crunchbase,Nightlife,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.4064319133758545,1
+crunchbase,Nintendo,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.39845386147499084,1
+crunchbase,Non Profit,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.44974032044410706,1
+crunchbase,Non-Fungible Token (NFT),92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.34017544984817505,1
+crunchbase,Non-Fungible Token (NFT),77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.338146448135376,2
+crunchbase,Non-Fungible Token (NFT),60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.33424097299575806,3
+crunchbase,Nuclear,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.39572158455848694,1
+crunchbase,Nursing and Residential Care,87,Residential care activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.7136031985282898,1
+crunchbase,Nutraceutical,10,Manufacture of food products,C,MANUFACTURING,0.3908708095550537,1
+crunchbase,Nutraceutical,10,Manufacture of food products,C,MANUFACTURING,0.3908708095550537,2
+crunchbase,Nutraceutical,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3841356337070465,3
+crunchbase,Nutraceutical,20,Manufacture of chemicals and chemical products,C,MANUFACTURING,0.37945762276649475,4
+crunchbase,Nutrition,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.35735955834388733,1
+crunchbase,Nutrition,10,Manufacture of food products,C,MANUFACTURING,0.356267511844635,2
+crunchbase,Office Administration,82,"Office administrative, office support and other business support activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.6209023594856262,1
+crunchbase,Office Supplies,82,"Office administrative, office support and other business support activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4471452832221985,1
+crunchbase,Oil and Gas,06,Extraction of crude petroleum and natural gas,B,MINING AND QUARRYING,0.7533515691757202,1
+crunchbase,Oncology,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3621715307235718,1
+crunchbase,Online Auctions,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.4405894875526428,1
+crunchbase,Online Forums,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2727203071117401,1
+crunchbase,Online Forums,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2749665081501007,2
+crunchbase,Online Forums,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2727203071117401,3
+crunchbase,Online Forums,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.27053213119506836,4
+crunchbase,Online Games,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.4045003652572632,1
+crunchbase,Online Portals,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2978035807609558,1
+crunchbase,Open Source,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.46370729804039,1
+crunchbase,Operating Systems,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4469645023345947,1
+crunchbase,Optical Communication,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.49124079942703247,1
+crunchbase,Organic,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.576720654964447,1
+crunchbase,Organic Food,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.560247004032135,1
+crunchbase,Outdoor Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.48578640818595886,1
+crunchbase,Outdoors,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4898539185523987,1
+crunchbase,Outpatient Care,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.5267016291618347,1
+crunchbase,Outsourcing,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5421234965324402,1
+crunchbase,PaaS,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.44650307297706604,1
+crunchbase,Packaging Services,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.6159754991531372,1
+crunchbase,Paper Manufacturing,17,Manufacture of paper and paper products,C,MANUFACTURING,0.7181264162063599,1
+crunchbase,Parenting,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.29106423258781433,1
+crunchbase,Parenting,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.29106423258781433,2
+crunchbase,Parking,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.4138125777244568,1
+crunchbase,Parking,51,Air transport,H,TRANSPORTATION AND STORAGE,0.4114700257778168,2
+crunchbase,Parking,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.40608978271484375,3
+crunchbase,Parking,45,Trade and repair of motor vehicles and motorcycles,G,WHOLESALE AND RETAIL TRADE,0.401824414730072,4
+crunchbase,Parks,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5419424772262573,1
+crunchbase,Payments,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.409711092710495,1
+crunchbase,PC Games,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4591197967529297,1
+crunchbase,Peer to Peer,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.395219624042511,1
+crunchbase,Penetration Testing,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.39234277606010437,1
+crunchbase,Performing Arts,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.6527894735336304,1
+crunchbase,Personal Branding,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5006676316261292,1
+crunchbase,Personal Care and Hygiene,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4639476537704468,1
+crunchbase,Personal Development,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4187314212322235,1
+crunchbase,Personal Finance,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.3996228575706482,1
+crunchbase,Personal Health,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.44763216376304626,1
+crunchbase,Personalization,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3907161355018616,1
+crunchbase,Pet,75,Veterinary activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4648936688899994,1
+crunchbase,Pharmaceutical,21,Manufacture of basic pharmaceutical products and pharmaceutical preparations,C,MANUFACTURING,0.6376169323921204,1
+crunchbase,Photo Editing,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3934538662433624,1
+crunchbase,Photo Sharing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.36405766010284424,1
+crunchbase,Photography,18,Printing and reproduction of recorded media,C,MANUFACTURING,0.39896827936172485,1
+crunchbase,Photography,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.39447900652885437,2
+crunchbase,Physical Security,80,Investigation and security activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4197424352169037,1
+crunchbase,Plant-Based Foods,10,Manufacture of food products,C,MANUFACTURING,0.43607059121131897,1
+crunchbase,Plastics and Rubber Manufacturing,22,Manufacture of rubber and plastic products,C,MANUFACTURING,0.7065799236297607,1
+crunchbase,Playstation,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3870583176612854,1
+crunchbase,Playstation,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3870583176612854,2
+crunchbase,Podcast,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5547760128974915,1
+crunchbase,Point of Sale,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.4605605900287628,1
+crunchbase,Politics,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4592002332210541,1
+crunchbase,Politics,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4592002332210541,2
+crunchbase,Pollution Control,39,Remediation activities and other waste management service activities,E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.5369129180908203,1
+crunchbase,Ports and Harbors,50,Water transport,H,TRANSPORTATION AND STORAGE,0.5893923044204712,1
+crunchbase,Power Grid,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4584479331970215,1
+crunchbase,Precious Metals,07,Mining of metal ores,B,MINING AND QUARRYING,0.5584286451339722,1
+crunchbase,Precision Medicine,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.40334224700927734,1
+crunchbase,Prediction Markets,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.49016669392585754,1
+crunchbase,Predictive Analytics,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.31491342186927795,1
+crunchbase,Prepaid Cards,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.33869466185569763,1
+crunchbase,Presentation Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.29941219091415405,1
+crunchbase,Presentation Software,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.2954500615596771,2
+crunchbase,Presentations,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.504995584487915,1
+crunchbase,Price Comparison,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.40197908878326416,1
+crunchbase,Primary and Urgent Care,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42845043540000916,1
+crunchbase,Primary Education,85,Education,Q,EDUCATION,0.4570115804672241,1
+crunchbase,Printing,18,Printing and reproduction of recorded media,C,MANUFACTURING,0.6204494833946228,1
+crunchbase,Privacy,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.3653375208377838,1
+crunchbase,Private Cloud,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4684714078903198,1
+crunchbase,Private Social Networking,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.36854344606399536,1
+crunchbase,Procurement,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3765767812728882,1
+crunchbase,Product Design,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.40520474314689636,1
+crunchbase,Product Design,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3981695771217346,2
+crunchbase,Product Design,72,Scientific research and development,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4119023084640503,3
+crunchbase,Product Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.40375280380249023,1
+crunchbase,Product Research,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5299896001815796,1
+crunchbase,Product Search,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3222852647304535,1
+crunchbase,Product Search,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3222852647304535,2
+crunchbase,Productivity Tools,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38616105914115906,1
+crunchbase,Professional Networking,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.5288864970207214,1
+crunchbase,Professional Services,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6603403687477112,1
+crunchbase,Project Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4663798213005066,1
+crunchbase,Property Development,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.5665809512138367,1
+crunchbase,Property Insurance,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.47915440797805786,1
+crunchbase,Property Management,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4886206388473511,1
+crunchbase,PropTech,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.48222342133522034,1
+crunchbase,Psychology,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4470207393169403,1
+crunchbase,Psychology,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.43837955594062805,2
+crunchbase,Public Relations,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5489668846130371,1
+crunchbase,Public Safety,84,Public administration and defence; compulsory social security,P,PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY,0.5067958831787109,1
+crunchbase,Public Transportation,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.48515307903289795,1
+crunchbase,Public Transportation,50,Water transport,H,TRANSPORTATION AND STORAGE,0.4881066679954529,2
+crunchbase,Public Transportation,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.48515307903289795,3
+crunchbase,Publishing,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6680050492286682,1
+crunchbase,Q&A,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.30199289321899414,1
+crunchbase,QR Codes,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.334730863571167,1
+crunchbase,Quality Assurance,74,"Other professional, scientific and technical activities",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3837800920009613,1
+crunchbase,Quality Assurance,66,Activities auxiliary to financial services and insurance activities,L,FINANCIAL AND INSURANCE ACTIVITIES,0.3811001479625702,2
+crunchbase,Quantified Self,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3664577007293701,1
+crunchbase,Quantum Computing,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3876572847366333,1
+crunchbase,Quantum Computing,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3876572847366333,2
+crunchbase,Racing,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.38038498163223267,1
+crunchbase,Racing,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.38038498163223267,2
+crunchbase,Railroad,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.4582485854625702,1
+crunchbase,Railroad,42,Civil engineering,F,CONSTRUCTION,0.449867844581604,2
+crunchbase,Reading Apps,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.41476762294769287,1
+crunchbase,Real Estate,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.6051480174064636,1
+crunchbase,Real Estate Brokerage,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.552687406539917,1
+crunchbase,Real Estate Investment,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.5250833034515381,1
+crunchbase,Real Time,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.30149170756340027,1
+crunchbase,Recipes,10,Manufacture of food products,C,MANUFACTURING,0.37845098972320557,1
+crunchbase,Recipes,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.3765377402305603,2
+crunchbase,Recreation,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.6504785418510437,1
+crunchbase,Recreational Vehicles,29,"Manufacture of motor vehicles, trailers and semi-trailers",C,MANUFACTURING,0.6063656210899353,1
+crunchbase,Recruiting,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.418644517660141,1
+crunchbase,Recycling,38,"Waste collection, recovery and disposal activities",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.6137992739677429,1
+crunchbase,Rehabilitation,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4670126140117645,1
+crunchbase,Religion,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3073301315307617,1
+crunchbase,Religion,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.30541667342185974,2
+crunchbase,Remote Sensing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.33767974376678467,1
+crunchbase,Remote Sensing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3321651220321655,2
+crunchbase,Remote Sensing,02,Forestry and logging,A,"AGRICULTURE, FORESTRY AND FISHING",0.3310393989086151,3
+crunchbase,Renewable Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.43854665756225586,1
+crunchbase,Renewable Energy,27,Manufacture of electrical equipment,C,MANUFACTURING,0.43422430753707886,2
+crunchbase,Rental,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4784371852874756,1
+crunchbase,Rental Property,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.49404698610305786,1
+crunchbase,Reputation,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5351231098175049,1
+crunchbase,Reservations,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4983016848564148,1
+crunchbase,Reservations,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4983016848564148,2
+crunchbase,Residential,68,Real estate activities,M,REAL ESTATE ACTIVITIES,0.5203651785850525,1
+crunchbase,Resorts,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.635928213596344,1
+crunchbase,Restaurants,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.6006617546081543,1
+crunchbase,Retail,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.6912775039672852,1
+crunchbase,Retail Technology,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5138431191444397,1
+crunchbase,Retirement,65,"Insurance, reinsurance and pension funding, except compulsory social security",L,FINANCIAL AND INSURANCE ACTIVITIES,0.40979066491127014,1
+crunchbase,RFID,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32937121391296387,1
+crunchbase,RFID,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32937121391296387,2
+crunchbase,RFID,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.32092106342315674,3
+crunchbase,Ride Sharing,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.3959465026855469,1
+crunchbase,Ride Sharing,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.3959465026855469,2
+crunchbase,RISC,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.3985843062400818,1
+crunchbase,Risk Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.43253809213638306,1
+crunchbase,Robotic Process Automation (RPA),62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34142085909843445,1
+crunchbase,Robotics,28,Manufacture of machinery and equipment n.e.c.,C,MANUFACTURING,0.4092031419277191,1
+crunchbase,Rugby,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3338852524757385,1
+crunchbase,SaaS,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.38440579175949097,1
+crunchbase,Sailing,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.41018417477607727,1
+crunchbase,Sailing,50,Water transport,H,TRANSPORTATION AND STORAGE,0.3999596834182739,2
+crunchbase,Sales,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.42140212655067444,1
+crunchbase,Sales Automation,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2932894229888916,1
+crunchbase,Sales Automation,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2932894229888916,2
+crunchbase,Sales Enablement,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.38280540704727173,1
+crunchbase,Same Day Delivery,53,Postal and courier activities,H,TRANSPORTATION AND STORAGE,0.5479872822761536,1
+crunchbase,Satellite Communication,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.42324209213256836,1
+crunchbase,Scheduling,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4151928722858429,1
+crunchbase,Seafood,03,Fishing and aquaculture,A,"AGRICULTURE, FORESTRY AND FISHING",0.7323614358901978,1
+crunchbase,Search Engine,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.32600414752960205,1
+crunchbase,Search Engine,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3204214572906494,2
+crunchbase,Secondary Education,85,Education,Q,EDUCATION,0.44939538836479187,1
+crunchbase,Secondhand Goods,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5010170936584473,1
+crunchbase,Security,80,Investigation and security activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4554618299007416,1
+crunchbase,Self-Storage,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.47098854184150696,1
+crunchbase,SEM,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5021467208862305,1
+crunchbase,Semantic Search,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.24409110844135284,1
+crunchbase,Semantic Search,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.24054555594921112,2
+crunchbase,Semantic Web,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4190707504749298,1
+crunchbase,Semiconductor,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.5447391271591187,1
+crunchbase,Sensor,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.42608338594436646,1
+crunchbase,SEO,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.39023229479789734,1
+crunchbase,Serious Games,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4186614155769348,1
+crunchbase,Service Industry,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.5010057091712952,1
+crunchbase,Sex Industry,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4714100658893585,1
+crunchbase,Sex Tech,26,"Manufacture of computer, electronic and optical products",C,MANUFACTURING,0.36021116375923157,1
+crunchbase,Sharing Economy,77,Rental and leasing activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.46654012799263,1
+crunchbase,Shipping,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.6492464542388916,1
+crunchbase,Shipping Broker,50,Water transport,H,TRANSPORTATION AND STORAGE,0.5301689505577087,1
+crunchbase,Shoes,15,Manufacture of leather and related products of other materials,C,MANUFACTURING,0.5490879416465759,1
+crunchbase,Shopping,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.4557076394557953,1
+crunchbase,Shopping Mall,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.5092530846595764,1
+crunchbase,Simulation,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3707839846611023,1
+crunchbase,Simulation,71,Architectural and engineering activities; technical testing and analysis,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3698415160179138,2
+crunchbase,Skiing,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3330548107624054,1
+crunchbase,Skill Assessment,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.35608842968940735,1
+crunchbase,Small and Medium Businesses,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5334919691085815,1
+crunchbase,Smart Building,81,Services to buildings and landscape activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.30715295672416687,1
+crunchbase,Smart Cities,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.37893182039260864,1
+crunchbase,Smart Contracts,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34408125281333923,1
+crunchbase,Smart Home,27,Manufacture of electrical equipment,C,MANUFACTURING,0.3719710111618042,1
+crunchbase,SMS,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4268103241920471,1
+crunchbase,Snack Food,10,Manufacture of food products,C,MANUFACTURING,0.3804098665714264,1
+crunchbase,SNS,94,Activities of membership organisations,T,OTHER SERVICE ACTIVITIES,0.40716180205345154,1
+crunchbase,Soccer,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.30820924043655396,1
+crunchbase,Social,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4129529297351837,1
+crunchbase,Social Assistance,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.618341326713562,1
+crunchbase,Social Bookmarking,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.30701106786727905,1
+crunchbase,Social CRM,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.39232394099235535,1
+crunchbase,Social Entrepreneurship,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3331909477710724,1
+crunchbase,Social Entrepreneurship,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.3331909477710724,2
+crunchbase,Social Impact,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42420870065689087,1
+crunchbase,Social Media,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4945072829723358,1
+crunchbase,Social Media Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.502114474773407,1
+crunchbase,Social Media Management,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5072447061538696,1
+crunchbase,Social Media Marketing,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5987530946731567,1
+crunchbase,Social Network,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3825232982635498,1
+crunchbase,Social News,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.39224937558174133,1
+crunchbase,Social Recruiting,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4021587371826172,1
+crunchbase,Social Recruiting,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4021587371826172,2
+crunchbase,Social Shopping,47,Retail trade,G,WHOLESALE AND RETAIL TRADE,0.3561559319496155,1
+crunchbase,Software,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4901060461997986,1
+crunchbase,Software Engineering,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5498514175415039,1
+crunchbase,Solar,27,Manufacture of electrical equipment,C,MANUFACTURING,0.4495569169521332,1
+crunchbase,Space Travel,99,Activities of extraterritorial organisations and bodies,V,ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES,0.3912630081176758,1
+crunchbase,Space Travel,99,Activities of extraterritorial organisations and bodies,V,ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES,0.3912630081176758,2
+crunchbase,Spam Filtering,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.31981348991394043,1
+crunchbase,Special Education,85,Education,Q,EDUCATION,0.40425530076026917,1
+crunchbase,Special Education,88,Social work activities without accommodation,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.39419928193092346,2
+crunchbase,Speech Recognition,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34624430537223816,1
+crunchbase,Sponsorship,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.508010983467102,1
+crunchbase,Sporting Goods,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.5140895843505859,1
+crunchbase,Sports,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4855700731277466,1
+crunchbase,Sports Leagues and Teams,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.3872406482696533,1
+crunchbase,Staffing Agency,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4486457109451294,1
+crunchbase,STEM Education,85,Education,Q,EDUCATION,0.4110032021999359,1
+crunchbase,Stock Exchanges,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.47951510548591614,1
+crunchbase,Subscription Service,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.4493409991264343,1
+crunchbase,Supply Chain Management,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.6267118453979492,1
+crunchbase,Surfing,22,Manufacture of rubber and plastic products,C,MANUFACTURING,0.42816969752311707,1
+crunchbase,Sustainability,38,"Waste collection, recovery and disposal activities",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.5270111560821533,1
+crunchbase,Swimming,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.4159952402114868,1
+crunchbase,Table Tennis,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.2987212538719177,1
+crunchbase,Table Tennis,92,Gambling and betting activities,S,"ARTS, SPORTS AND RECREATION",0.29328444600105286,2
+crunchbase,Task Management,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3103685975074768,1
+crunchbase,Task Management,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3103685975074768,2
+crunchbase,Tax Consulting,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.5203487873077393,1
+crunchbase,Tax Consulting,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.512977659702301,2
+crunchbase,Tax Preparation,69,Legal and accounting activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.46243053674697876,1
+crunchbase,Taxi Service,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.3937341570854187,1
+crunchbase,Taxi Service,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.3937341570854187,2
+crunchbase,Tea,11,Manufacture of beverages,C,MANUFACTURING,0.48002734780311584,1
+crunchbase,Technical Support,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.46238481998443604,1
+crunchbase,Technical Support,95,"Repair and maintenance of computers, personal and household goods, and motor vehicles and motorcycles",T,OTHER SERVICE ACTIVITIES,0.4518742263317108,2
+crunchbase,Teenagers,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.349477618932724,1
+crunchbase,Telecommunications,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.6254229545593262,1
+crunchbase,Telehealth,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4490238428115845,1
+crunchbase,Tennis,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.37265682220458984,1
+crunchbase,Test and Measurement,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.3499155342578888,1
+crunchbase,Text Analytics,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3655321002006531,1
+crunchbase,Text Analytics,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.36641258001327515,2
+crunchbase,Text Analytics,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3655321002006531,3
+crunchbase,Textbook,58,Publishing activities,J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5750929713249207,1
+crunchbase,Textiles,13,Manufacture of textiles,C,MANUFACTURING,0.7067107558250427,1
+crunchbase,Theatre,90,Arts creation and performing arts activities,S,"ARTS, SPORTS AND RECREATION",0.5873874425888062,1
+crunchbase,Therapeutics,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.4650191068649292,1
+crunchbase,Ticketing,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.43724527955055237,1
+crunchbase,Timber,02,Forestry and logging,A,"AGRICULTURE, FORESTRY AND FISHING",0.7820815443992615,1
+crunchbase,Timeshare,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4234815239906311,1
+crunchbase,Timeshare,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.4234815239906311,2
+crunchbase,Tobacco,12,Manufacture of tobacco products,C,MANUFACTURING,0.7244182825088501,1
+crunchbase,Tour Operator,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.6339646577835083,1
+crunchbase,Tourism,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.6716381311416626,1
+crunchbase,Toys,22,Manufacture of rubber and plastic products,C,MANUFACTURING,0.5532026886940002,1
+crunchbase,Trade Shows,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.43472549319267273,1
+crunchbase,Trading Platform,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.39862218499183655,1
+crunchbase,Training,85,Education,Q,EDUCATION,0.4128873348236084,1
+crunchbase,Transaction Processing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4109264016151428,1
+crunchbase,Translation Service,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.3309424817562103,1
+crunchbase,Translation Service,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.32377445697784424,2
+crunchbase,Transportation,51,Air transport,H,TRANSPORTATION AND STORAGE,0.617131769657135,1
+crunchbase,Transportation,49,Land transport and transport via pipelines,H,TRANSPORTATION AND STORAGE,0.610672116279602,2
+crunchbase,Travel,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.6828337907791138,1
+crunchbase,Travel Accommodations,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.7282425761222839,1
+crunchbase,Travel Agency,79,"Travel agency, tour operator and other reservation service and related activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.7032299637794495,1
+crunchbase,Tutoring,85,Education,Q,EDUCATION,0.4713064432144165,1
+crunchbase,Tutoring,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.4615265727043152,2
+crunchbase,TV,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6995242834091187,1
+crunchbase,TV Production,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.6026595830917358,1
+crunchbase,Twitter,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.40199631452560425,1
+crunchbase,Ultimate Frisbee,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.36385032534599304,1
+crunchbase,Underserved Children,85,Education,Q,EDUCATION,0.3530398905277252,1
+crunchbase,Underserved Children,85,Education,Q,EDUCATION,0.3530398905277252,2
+crunchbase,Unified Communications,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34016308188438416,1
+crunchbase,Unified Communications,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.34016308188438416,2
+crunchbase,Unified Communications,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.33469921350479126,3
+crunchbase,Universities,85,Education,Q,EDUCATION,0.4795289635658264,1
+crunchbase,Usability Testing,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3518449664115906,1
+crunchbase,UX Design,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3916155993938446,1
+crunchbase,Vacation Rental,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.5182843208312988,1
+crunchbase,Vending and Concessions,56,Food and beverage service activities,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.5014991164207458,1
+crunchbase,Venture Capital,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.4132494628429413,1
+crunchbase,Vertical Search,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.42139455676078796,1
+crunchbase,Veterinary,75,Veterinary activities,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.6762871742248535,1
+crunchbase,Video,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5558763742446899,1
+crunchbase,Video,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5558763742446899,2
+crunchbase,Video Advertising,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4862225651741028,1
+crunchbase,Video Chat,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.26909127831459045,1
+crunchbase,Video Chat,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.26876190304756165,2
+crunchbase,Video Chat,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.26696500182151794,3
+crunchbase,Video Chat,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.2626088559627533,4
+crunchbase,Video Conferencing,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3324274718761444,1
+crunchbase,Video Editing,59,"Motion picture, video and television programme production, sound recording and music publishing activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5573781728744507,1
+crunchbase,Video Games,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5142308473587036,1
+crunchbase,Video on Demand,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.5488833785057068,1
+crunchbase,Video Streaming,60,"Programming, broadcasting, news agency and other content distribution activities",J,"PUBLISHING, BROADCASTING, AND CONTENT PRODUCTION AND DISTRIBUTION ACTIVITIES",0.546727180480957,1
+crunchbase,Virtual Assistant,82,"Office administrative, office support and other business support activities",O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.5523096919059753,1
+crunchbase,Virtual Currency,64,"Financial service activities, except insurance and pension funding",L,FINANCIAL AND INSURANCE ACTIVITIES,0.39059799909591675,1
+crunchbase,Virtual Desktop,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4603799879550934,1
+crunchbase,Virtual Goods,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3564631938934326,1
+crunchbase,Virtual Goods,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3564631938934326,2
+crunchbase,Virtual Reality,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.41288790106773376,1
+crunchbase,Virtual Workforce,78,Employment activities,O,ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES,0.3737240135669708,1
+crunchbase,Virtual World,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.30197224020957947,1
+crunchbase,Virtualization,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.44261273741722107,1
+crunchbase,Visual Search,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.27729532122612,1
+crunchbase,Vocational Education,85,Education,Q,EDUCATION,0.43497493863105774,1
+crunchbase,VoIP,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.47962838411331177,1
+crunchbase,Volley Ball,93,Sports activities and amusement and recreation activities,S,"ARTS, SPORTS AND RECREATION",0.25382912158966064,1
+crunchbase,Warehouse Automation,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.51621413230896,1
+crunchbase,Warehousing,52,"Warehousing, storage and support activities for transportation",H,TRANSPORTATION AND STORAGE,0.7243459224700928,1
+crunchbase,Waste Management,38,"Waste collection, recovery and disposal activities",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.6620020866394043,1
+crunchbase,Water,36,"Water collection, treatment and supply",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.6781309247016907,1
+crunchbase,Water Purification,36,"Water collection, treatment and supply",E,"WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES",0.6252769827842712,1
+crunchbase,Water Transportation,50,Water transport,H,TRANSPORTATION AND STORAGE,0.7591806650161743,1
+crunchbase,Wealth Management,70,Activities of head offices and management consultancy,N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.4230969548225403,1
+crunchbase,Wearables,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.39747148752212524,1
+crunchbase,Web Apps,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.42663419246673584,1
+crunchbase,Web Browsers,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.35976478457450867,1
+crunchbase,Web Design,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3583660125732422,1
+crunchbase,Web Development,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4326375424861908,1
+crunchbase,Web Hosting,63,"Computing infrastructure, data processing, hosting and other information service activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.5151838660240173,1
+crunchbase,Web3,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.33649781346321106,1
+crunchbase,WebOS,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.28769925236701965,1
+crunchbase,Wedding,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.39634156227111816,1
+crunchbase,Wedding,55,Accommodation,I,ACCOMMODATION AND FOOD SERVICE ACTIVITIES,0.38988935947418213,2
+crunchbase,Wellness,86,Human health activities,R,HUMAN HEALTH AND SOCIAL WORK ACTIVITIES,0.40857765078544617,1
+crunchbase,Wholesale,46,Wholesale trade,G,WHOLESALE AND RETAIL TRADE,0.6885085105895996,1
+crunchbase,Wildlife Conservation,01,"Crop and animal production, hunting and related service activities",A,"AGRICULTURE, FORESTRY AND FISHING",0.4091355502605438,1
+crunchbase,Wind Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4582909047603607,1
+crunchbase,Wind Energy,35,"Electricity, gas, steam and air conditioning supply",D,"ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY",0.4582909047603607,2
+crunchbase,Windows,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4776439666748047,1
+crunchbase,Windows Phone,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.3502662181854248,1
+crunchbase,Wine And Spirits,11,Manufacture of beverages,C,MANUFACTURING,0.5994657278060913,1
+crunchbase,Winery,11,Manufacture of beverages,C,MANUFACTURING,0.48458853363990784,1
+crunchbase,Wired Telecommunications,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.6292152404785156,1
+crunchbase,Wireless,61,Telecommunication,K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.45866718888282776,1
+crunchbase,Women's,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3678603768348694,1
+crunchbase,Women's,96,Personal service activities,T,OTHER SERVICE ACTIVITIES,0.3678603768348694,2
+crunchbase,Wood Processing,16,"Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials",C,MANUFACTURING,0.6874037384986877,1
+crunchbase,Xbox,62,"Computer programming, consultancy and related activities",K,"TELECOMMUNICATION, COMPUTER PROGRAMMING, CONSULTING, COMPUTING INFRASTRUCTURE AND OTHER INFORMATION SERVICE ACTIVITIES",0.4209817349910736,1
+crunchbase,Young Adults,73,"Activities of advertising, market research and public relations",N,"PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES",0.46227458119392395,1
